@@ -18,5 +18,18 @@
 *  memory write 修改内存中的值 格式：memory write 内存地址 值
 
 ####一个OC对象在内存中如何布局？
+* sizeof，class_getInstanceSize，malloc_size 这三个方法有什么区别。
+	* sizeof:不是一个函数，只是一个运算符，在程序编译的时候会直接得到结果。 
+	* class_getInstanceSize：这个函数是获取当前传入参数的类，在创建一个实例对象的时候需要分配多少存储空间。
+	* malloc_size	：计算当前类对象占用了多少存储空间，系统在分配内存的时候会考虑内存对齐问题，在iOS设备中分配的内存都是16的倍数。所以这个方法计算出来的大小一般情况下会比class_getInstanceSize 大一些
+* 查看源码在libMalloc这个源码库中。
+* OC的instonce（实例对象在内存中如何布局）
+	* 实例对象只存储isa指针，和成员变量。 
+* OC的Class(class对象):每个类在内存中有并且只有一个Class对象，Class对象在内存中存储的信息主要包括 isa指针，superclass指针,类的属性信息（@property）,类的对象方法信息（instance method）,类的协议信息（protocol）,类的成员变量信息（ivar）,获取到类的Class  可以直接通过类对象的class方法  或者类的class方法 或者 object_getClass(类的instance对象) 来获取到类的Class对象
+* metaClass对象 可以通过object_getClass(类的Class) 方法获取到当前类的metaClass对象，一个类有，并且只有一个metaClass对象。metaClass中存储的有isa指针，superclass指针，类的类方法信息（classmethod）
+* objc_getClass :看源码实现 这个方法接收一个字符串参数，返回这个字符串类名所对应的类对象。
+* object_getClass：源码中返回了当前对象的isa指针，当蚕食是一个instance对象的时候，返回的是这个类的类对象，所以当前类的instance的isa指针指向的是当前类的Class对象，而参数是Class对象的时候 返回的是当前类的原类对象，所以当前类的Class对象的isa指针指向的是metaClass对象
+* class_isMetaClass() 可以通过这个方法来判断传入的参数是否是这个类的metaClass.
 
+#####isa指针和superclas指针
 
