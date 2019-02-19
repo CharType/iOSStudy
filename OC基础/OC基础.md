@@ -43,3 +43,16 @@
 * class调用类的方法轨迹：isa找到metaClass,如果方法不存在，就通过superclass找到父类
 
 * 从64bit开始，isa指针需要进行一次位运算才能计算出真实的地址。和ISA_MASK做一次位运算。
+
+#####KVO的底层实现
+*补充KVO的相关资料
+#####KVC
+* setValue:forKey: 和 setValue:forKeyPath: 的区别。
+* 使用KVC设置值能触发KVO吗？KVC修改了Key，会自动触发KVO监听，不管这个对象的Class中有没有set方法的实现，没有set方法会手动触发KVO
+* setValue:forKey:的原理
+
+![](setValue：forKey：原理.png)
+
+* valueForKey:的原理
+
+![](valueForKey.png)
