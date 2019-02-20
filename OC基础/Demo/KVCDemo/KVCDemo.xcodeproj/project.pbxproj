@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3B0108BA221D0751008B4C82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0108B9221D0751008B4C82 /* main.m */; };
+		3B0108C2221D1276008B4C82 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0108C1221D1276008B4C82 /* Person.m */; };
+		3B0108C5221D3A82008B4C82 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0108C4221D3A82008B4C82 /* Student.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		3B0108B6221D0751008B4C82 /* KVCDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KVCDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0108B9221D0751008B4C82 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B0108C0221D1276008B4C82 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		3B0108C1221D1276008B4C82 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		3B0108C3221D3A82008B4C82 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		3B0108C4221D3A82008B4C82 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				3B0108B9221D0751008B4C82 /* main.m */,
+				3B0108C3221D3A82008B4C82 /* Student.h */,
+				3B0108C4221D3A82008B4C82 /* Student.m */,
+				3B0108C0221D1276008B4C82 /* Person.h */,
+				3B0108C1221D1276008B4C82 /* Person.m */,
 			);
 			path = KVCDemo;
 			sourceTree = "<group>";
@@ -118,7 +128,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B0108C2221D1276008B4C82 /* Person.m in Sources */,
 				3B0108BA221D0751008B4C82 /* main.m in Sources */,
+				3B0108C5221D3A82008B4C82 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
