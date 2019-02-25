@@ -10,6 +10,7 @@
 		3B0108BA221D0751008B4C82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0108B9221D0751008B4C82 /* main.m */; };
 		3B0108C2221D1276008B4C82 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0108C1221D1276008B4C82 /* Person.m */; };
 		3B0108C5221D3A82008B4C82 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0108C4221D3A82008B4C82 /* Student.m */; };
+		3B0108C8221D40DD008B4C82 /* Person+test.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0108C7221D40DD008B4C82 /* Person+test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,9 @@
 		3B0108C1221D1276008B4C82 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		3B0108C3221D3A82008B4C82 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		3B0108C4221D3A82008B4C82 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		3B0108C6221D40DD008B4C82 /* Person+test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+test.h"; sourceTree = "<group>"; };
+		3B0108C7221D40DD008B4C82 /* Person+test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+test.m"; sourceTree = "<group>"; };
+		3B0108CA221DB338008B4C82 /* Person+test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Person+test.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,9 @@
 				3B0108C4221D3A82008B4C82 /* Student.m */,
 				3B0108C0221D1276008B4C82 /* Person.h */,
 				3B0108C1221D1276008B4C82 /* Person.m */,
+				3B0108C6221D40DD008B4C82 /* Person+test.h */,
+				3B0108C7221D40DD008B4C82 /* Person+test.m */,
+				3B0108CA221DB338008B4C82 /* Person+test.cpp */,
 			);
 			path = KVCDemo;
 			sourceTree = "<group>";
@@ -129,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B0108C2221D1276008B4C82 /* Person.m in Sources */,
+				3B0108C8221D40DD008B4C82 /* Person+test.m in Sources */,
 				3B0108BA221D0751008B4C82 /* main.m in Sources */,
 				3B0108C5221D3A82008B4C82 /* Student.m in Sources */,
 			);

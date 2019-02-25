@@ -23,4 +23,8 @@
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
     NSLog(@"setValue:forUndefinedKey:");
 }
+
+- (void)test {
+    NSLog(@"Person %s", __FUNCTION__);
+}
 @end

@@ -21,6 +21,7 @@
 //@property (nonatomic, assign) NSInteger age;
 //- (void)setAge:(NSInteger)age;
 //- (void)_setAge:(NSInteger)age;
+- (void)test;
 @end
 
 

@@ -28,7 +28,7 @@ int main(int argc, const char * argv[]) {
 //        NSLog(@"%p", isa);
     
         Person *p2 = [[Person alloc] init];
-        
+       [p2 test];
         [p2 setValue:@(20) forKey:@"age"];
 //        NSLog(@"%ld",p2->_age);
     

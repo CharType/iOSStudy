@@ -45,7 +45,14 @@
 * 从64bit开始，isa指针需要进行一次位运算才能计算出真实的地址。和ISA_MASK做一次位运算。
 
 #####KVO的底层实现
-*补充KVO的相关资料
+
+调用set方法里面
+Foundation
+_NSSetIntValueAndNotify
+![屏幕快照 2018-12-15 11.28.06.png](https://upload-images.jianshu.io/upload_images/2510972-38b26f781269fd24.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![屏幕快照 2018-12-15 11.26.56.png](https://upload-images.jianshu.io/upload_images/2510972-dab5e798211fb9a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 #####KVC
 * setValue:forKey: 和 setValue:forKeyPath: 的区别。
 * 使用KVC设置值能触发KVO吗？KVC修改了Key，会自动触发KVO监听，不管这个对象的Class中有没有set方法的实现，没有set方法会手动触发KVO
@@ -58,4 +65,27 @@
 ![](valueForKey.png)
 
 #####分类的原理：
+* 分类的底层存储结构(在objc4的objc-runtime-new.h文件中定义)：
+![](分类的底层结构@2x.png)
+* 从category_t这个结构体中看出是没有办法存储成员变量的。所以分类中不能直接声明成员变量。(苹果为什么设计成不能在分类中添加成员变量？)
+* 每个类的Category 都会被编译成一个category_t类型的结构体，runtime加载每个类的时候会将每个类category_t中的数据会合并到类信息中，将合并后的分类数据插入到原来的数据的前面。
+* 源码解读顺序
+	* objc-os.mm
+	* _objc_init
+	* map_images
+	* map_images_nolock
 
+	* objc-runtime-new.mm
+	* _read_images
+	* remethodizeClass
+	* attachCategories
+	* attachLists
+	* realloc、memmove、 memcpy
+
+   * void attachLists(List* const * addedLists, uint32_t addedCount) 
+
+	* objc-os.mm objc_init
+   * void attachLists(List* const * addedLists, uint32_t addedCount) 
+	* //分类附加方法
+	* static void 
+attachCategories(Class cls, category_list *cats, bool flush_caches)
