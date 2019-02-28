@@ -78,14 +78,69 @@ _NSSetIntValueAndNotify
 	* objc-runtime-new.mm
 	* _read_images
 	* remethodizeClass
-	* attachCategories
+	* attachCategories 附加分类的方法
 	* attachLists
 	* realloc、memmove、 memcpy
 
-   * void attachLists(List* const * addedLists, uint32_t addedCount) 
 
-	* objc-os.mm objc_init
-   * void attachLists(List* const * addedLists, uint32_t addedCount) 
-	* //分类附加方法
-	* static void 
-attachCategories(Class cls, category_list *cats, bool flush_caches)
+#####+ (void)load 和 + (void)initialize 这2个方法的区别，实现，原理。
+* +load方法会在runtime加载类，分类的时候候调用，是通过IMP(方法地址)直接进行调用，不是通过objc_msgSend发消息的方式进行调用的。
+* 每个类，分类的+load，在程序运行过程中只调用一次
+* 调用顺序：
+	* 1.先调用类的+load
+		* 按照编译先后顺序（先编译，先调用）
+		* 调用子类的+load之前会先调用父类的+load
+
+	* 2.再调用分类的+load
+		* 按照编译先后顺序（先编译，先调用）
+
+* +load方法的objc4源码解读过程：搜索objc-os.mm
+	* _objc_init 方法
+	* load_images
+
+	
+	* prepare_load_methods
+	* schedule_class_load
+	* add_class_to_loadable_list
+	* add_category_to_loadable_list
+
+	* call_load_methods
+	* call_class_loads
+	* call_category_loads 
+	* (*load_method)(cls,SEL_load)
+
+* +initialize:
+	* +initialize方法会在类第一次接收到消息的时候调用
+	* 调用顺序：
+		* 先调用父类的+ initialize,再调用子类的+initialize
+		* 先初始化父类，在初始化子类，每个类只会初始化1次
+
+	* +initialize	 和 +load的区别： +initialize是通过objc_msgSend 发消息来进行调用的所以：
+		* 如果子类没有实现+initialize	方法，会调用父类的+initialize（所以父类的+initialize	可能会被调用多次）	
+		* 如果分类实现了+initialize	，就会覆盖类本身的+initialize	方法
+
+	* initialized的实现如何看源码：
+	* objc-msg-arm64.s 	汇编
+	* objc_msgSend
+
+	* objc-runtime-new.mm
+	* class_getInstanceMethod
+	* lookUpImpOrNil
+	* lookUpImpOrForward
+	* _class_initialize
+	* callInitialize
+	* objc_msgSend(cls, SEL_initialize)
+
+#####关联对象
+		
+* 实现关联对象技术的核心对象有：
+* AssociationsManager
+* AssociationsHashMap
+* ObjectAssociationMap
+* ObjcAssociation
+
+源码搜索
+objc_setA
+
+objc4源码解读：objc-references.mm
+![关联对象原理.png](https://upload-images.jianshu.io/upload_images/2510972-8abb7bafa511c677.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
