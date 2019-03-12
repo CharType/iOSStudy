@@ -59,7 +59,6 @@ __OBJC_RW_DLLIMPORT int __CFConstantStringClassReference[];
 #endif
 #ifndef BLOCK_IMPL
 #define BLOCK_IMPL
-
 // Runtime copy/destroy helper functions (from Block_private.h)
 #ifdef __OBJC_EXPORT_BLOCKS
 extern "C" __declspec(dllexport) void _Block_object_assign(void *, const void *, const int);
@@ -101,7 +100,7 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_main_262dfb_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"a = %d b = %d",13};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_main_e350e4_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"a = %d b = %d",13};
 
 
 
@@ -32630,15 +32629,20 @@ struct NSUUID_IMPL {
 
 #pragma clang assume_nonnull end
 
-//    带有临时变量和静态变量的block转换之后
-//    int a = 10;
-//    static int b = 20;
-//    void (^block)(void) = ^{
-//        NSLog(@"a = %d b = %d", a, b);
-//    };
-//    a = 100;
-//    b = 200;
-//    block();
+//int a = 10;  block中使用全局变量转换之后
+//static int b = 20;
+//
+//int main(int argc, const char * argv[]) {
+//    @autoreleasepool {
+//        void (^block)(void) = ^{
+//            NSLog(@"a = %d b = %d", a, b);
+//        };
+//        a = 100;
+//        b = 200;
+//        block();
+//    }
+//    return 0;
+//}
 
 struct __block_impl {
     void *isa;
@@ -32647,12 +32651,14 @@ struct __block_impl {
     void *FuncPtr;
 };
 
+int a = 10;
+static int b = 20;
+
+
 struct __main_block_impl_0 {
   struct __block_impl impl;
   struct __main_block_desc_0* Desc;
-  int a;
-  int *b;
-  __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int _a, int *_b, int flags=0) : a(_a), b(_b) {
+  __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int flags=0) {
     impl.isa = &_NSConcreteStackBlock;
     impl.Flags = flags;
     impl.FuncPtr = fp;
@@ -32660,10 +32666,8 @@ struct __main_block_impl_0 {
   }
 };
 static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
-  int a = __cself->a; // bound by copy
-  int *b = __cself->b; // bound by copy
 
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_main_262dfb_mi_0, a, (*b));
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_main_e350e4_mi_0, a, b);
         }
 
 static struct __main_block_desc_0 {
@@ -32672,9 +32676,7 @@ static struct __main_block_desc_0 {
 } __main_block_desc_0_DATA = { 0, sizeof(struct __main_block_impl_0)};
 int main(int argc, const char * argv[]) {
     /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool; 
-        int a = 10;
-        static int b = 20;
-        void (*block)(void) = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA, a, &b));
+        void (*block)(void) = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA));
         a = 100;
         b = 200;
         ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);

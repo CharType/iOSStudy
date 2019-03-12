@@ -59,7 +59,12 @@ __OBJC_RW_DLLIMPORT int __CFConstantStringClassReference[];
 #endif
 #ifndef BLOCK_IMPL
 #define BLOCK_IMPL
-
+struct __block_impl {
+  void *isa;
+  int Flags;
+  int Reserved;
+  void *FuncPtr;
+};
 // Runtime copy/destroy helper functions (from Block_private.h)
 #ifdef __OBJC_EXPORT_BLOCKS
 extern "C" __declspec(dllexport) void _Block_object_assign(void *, const void *, const int);
@@ -101,7 +106,16 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_main_262dfb_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"a = %d b = %d",13};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_Persion_cadc31_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"self = %@",9};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_Persion_cadc31_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"age = %d",8};
+
+
+
+
+
+
+
+
 
 
 
@@ -32630,55 +32644,246 @@ struct NSUUID_IMPL {
 
 #pragma clang assume_nonnull end
 
-//    带有临时变量和静态变量的block转换之后
-//    int a = 10;
-//    static int b = 20;
-//    void (^block)(void) = ^{
-//        NSLog(@"a = %d b = %d", a, b);
-//    };
-//    a = 100;
-//    b = 200;
-//    block();
+#pragma clang assume_nonnull begin
 
-struct __block_impl {
-    void *isa;
-    int Flags;
-    int Reserved;
-    void *FuncPtr;
+
+#ifndef _REWRITER_typedef_Persion
+#define _REWRITER_typedef_Persion
+typedef struct objc_object Persion;
+typedef struct {} _objc_exc_Persion;
+#endif
+
+extern "C" unsigned long OBJC_IVAR_$_Persion$_age;
+struct Persion_IMPL {
+	struct NSObject_IMPL NSObject_IVARS;
+	int _age;
 };
 
-struct __main_block_impl_0 {
+
+/* @end */
+
+#pragma clang assume_nonnull end
+
+// @interface Persion()
+// @property (nonatomic, assign) int age;
+/* @end */
+
+
+// @implementation Persion
+
+struct __Persion__test1_block_impl_0 {
   struct __block_impl impl;
-  struct __main_block_desc_0* Desc;
-  int a;
-  int *b;
-  __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int _a, int *_b, int flags=0) : a(_a), b(_b) {
+  struct __Persion__test1_block_desc_0* Desc;
+  Persion *self;
+  __Persion__test1_block_impl_0(void *fp, struct __Persion__test1_block_desc_0 *desc, Persion *_self, int flags=0) : self(_self) {
     impl.isa = &_NSConcreteStackBlock;
     impl.Flags = flags;
     impl.FuncPtr = fp;
     Desc = desc;
   }
 };
-static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
-  int a = __cself->a; // bound by copy
-  int *b = __cself->b; // bound by copy
+static void __Persion__test1_block_func_0(struct __Persion__test1_block_impl_0 *__cself) {
+  Persion *self = __cself->self; // bound by copy
 
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_main_262dfb_mi_0, a, (*b));
-        }
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_Persion_cadc31_mi_0, self);
+    }
+static void __Persion__test1_block_copy_0(struct __Persion__test1_block_impl_0*dst, struct __Persion__test1_block_impl_0*src) {_Block_object_assign((void*)&dst->self, (void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
 
-static struct __main_block_desc_0 {
+static void __Persion__test1_block_dispose_0(struct __Persion__test1_block_impl_0*src) {_Block_object_dispose((void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
+
+static struct __Persion__test1_block_desc_0 {
   size_t reserved;
   size_t Block_size;
-} __main_block_desc_0_DATA = { 0, sizeof(struct __main_block_impl_0)};
-int main(int argc, const char * argv[]) {
-    /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool; 
-        int a = 10;
-        static int b = 20;
-        void (*block)(void) = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA, a, &b));
-        a = 100;
-        b = 200;
-        ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
-    }
-    return 0;
+  void (*copy)(struct __Persion__test1_block_impl_0*, struct __Persion__test1_block_impl_0*);
+  void (*dispose)(struct __Persion__test1_block_impl_0*);
+} __Persion__test1_block_desc_0_DATA = { 0, sizeof(struct __Persion__test1_block_impl_0), __Persion__test1_block_copy_0, __Persion__test1_block_dispose_0};
+
+static void _I_Persion_test1(Persion * self, SEL _cmd) {
+    void (*test1Block)(void) = ((void (*)())&__Persion__test1_block_impl_0((void *)__Persion__test1_block_func_0, &__Persion__test1_block_desc_0_DATA, self, 570425344));
 }
+
+
+struct __Persion__test2_block_impl_0 {
+  struct __block_impl impl;
+  struct __Persion__test2_block_desc_0* Desc;
+  Persion *self;
+  __Persion__test2_block_impl_0(void *fp, struct __Persion__test2_block_desc_0 *desc, Persion *_self, int flags=0) : self(_self) {
+    impl.isa = &_NSConcreteStackBlock;
+    impl.Flags = flags;
+    impl.FuncPtr = fp;
+    Desc = desc;
+  }
+};
+static void __Persion__test2_block_func_0(struct __Persion__test2_block_impl_0 *__cself) {
+  Persion *self = __cself->self; // bound by copy
+
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_Persion_cadc31_mi_1, (*(int *)((char *)self + OBJC_IVAR_$_Persion$_age)));
+    }
+static void __Persion__test2_block_copy_0(struct __Persion__test2_block_impl_0*dst, struct __Persion__test2_block_impl_0*src) {_Block_object_assign((void*)&dst->self, (void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
+
+static void __Persion__test2_block_dispose_0(struct __Persion__test2_block_impl_0*src) {_Block_object_dispose((void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
+
+static struct __Persion__test2_block_desc_0 {
+  size_t reserved;
+  size_t Block_size;
+  void (*copy)(struct __Persion__test2_block_impl_0*, struct __Persion__test2_block_impl_0*);
+  void (*dispose)(struct __Persion__test2_block_impl_0*);
+} __Persion__test2_block_desc_0_DATA = { 0, sizeof(struct __Persion__test2_block_impl_0), __Persion__test2_block_copy_0, __Persion__test2_block_dispose_0};
+
+static void _I_Persion_test2(Persion * self, SEL _cmd) {
+    void (*test2Block)(void) = ((void (*)())&__Persion__test2_block_impl_0((void *)__Persion__test2_block_func_0, &__Persion__test2_block_desc_0_DATA, self, 570425344));
+}
+
+static int _I_Persion_age(Persion * self, SEL _cmd) { return (*(int *)((char *)self + OBJC_IVAR_$_Persion$_age)); }
+static void _I_Persion_setAge_(Persion * self, SEL _cmd, int age) { (*(int *)((char *)self + OBJC_IVAR_$_Persion$_age)) = age; }
+// @end
+
+struct _prop_t {
+	const char *name;
+	const char *attributes;
+};
+
+struct _protocol_t;
+
+struct _objc_method {
+	struct objc_selector * _cmd;
+	const char *method_type;
+	void  *_imp;
+};
+
+struct _protocol_t {
+	void * isa;  // NULL
+	const char *protocol_name;
+	const struct _protocol_list_t * protocol_list; // super protocols
+	const struct method_list_t *instance_methods;
+	const struct method_list_t *class_methods;
+	const struct method_list_t *optionalInstanceMethods;
+	const struct method_list_t *optionalClassMethods;
+	const struct _prop_list_t * properties;
+	const unsigned int size;  // sizeof(struct _protocol_t)
+	const unsigned int flags;  // = 0
+	const char ** extendedMethodTypes;
+};
+
+struct _ivar_t {
+	unsigned long int *offset;  // pointer to ivar offset location
+	const char *name;
+	const char *type;
+	unsigned int alignment;
+	unsigned int  size;
+};
+
+struct _class_ro_t {
+	unsigned int flags;
+	unsigned int instanceStart;
+	unsigned int instanceSize;
+	const unsigned char *ivarLayout;
+	const char *name;
+	const struct _method_list_t *baseMethods;
+	const struct _objc_protocol_list *baseProtocols;
+	const struct _ivar_list_t *ivars;
+	const unsigned char *weakIvarLayout;
+	const struct _prop_list_t *properties;
+};
+
+struct _class_t {
+	struct _class_t *isa;
+	struct _class_t *superclass;
+	void *cache;
+	void *vtable;
+	struct _class_ro_t *ro;
+};
+
+struct _category_t {
+	const char *name;
+	struct _class_t *cls;
+	const struct _method_list_t *instance_methods;
+	const struct _method_list_t *class_methods;
+	const struct _protocol_list_t *protocols;
+	const struct _prop_list_t *properties;
+};
+extern "C" __declspec(dllimport) struct objc_cache _objc_empty_cache;
+#pragma warning(disable:4273)
+
+extern "C" unsigned long int OBJC_IVAR_$_Persion$_age __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct Persion, _age);
+
+static struct /*_ivar_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _prop_t)
+	unsigned int count;
+	struct _ivar_t ivar_list[1];
+} _OBJC_$_INSTANCE_VARIABLES_Persion __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_ivar_t),
+	1,
+	{{(unsigned long int *)&OBJC_IVAR_$_Persion$_age, "_age", "i", 2, 4}}
+};
+
+static struct /*_method_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _objc_method)
+	unsigned int method_count;
+	struct _objc_method method_list[4];
+} _OBJC_$_INSTANCE_METHODS_Persion __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_objc_method),
+	4,
+	{{(struct objc_selector *)"test1", "v16@0:8", (void *)_I_Persion_test1},
+	{(struct objc_selector *)"test2", "v16@0:8", (void *)_I_Persion_test2},
+	{(struct objc_selector *)"age", "i16@0:8", (void *)_I_Persion_age},
+	{(struct objc_selector *)"setAge:", "v20@0:8i16", (void *)_I_Persion_setAge_}}
+};
+
+static struct _class_ro_t _OBJC_METACLASS_RO_$_Persion __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	1, sizeof(struct _class_t), sizeof(struct _class_t), 
+	0, 
+	"Persion",
+	0, 
+	0, 
+	0, 
+	0, 
+	0, 
+};
+
+static struct _class_ro_t _OBJC_CLASS_RO_$_Persion __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	0, __OFFSETOFIVAR__(struct Persion, _age), sizeof(struct Persion_IMPL), 
+	0, 
+	"Persion",
+	(const struct _method_list_t *)&_OBJC_$_INSTANCE_METHODS_Persion,
+	0, 
+	(const struct _ivar_list_t *)&_OBJC_$_INSTANCE_VARIABLES_Persion,
+	0, 
+	0, 
+};
+
+extern "C" __declspec(dllimport) struct _class_t OBJC_METACLASS_$_NSObject;
+
+extern "C" __declspec(dllexport) struct _class_t OBJC_METACLASS_$_Persion __attribute__ ((used, section ("__DATA,__objc_data"))) = {
+	0, // &OBJC_METACLASS_$_NSObject,
+	0, // &OBJC_METACLASS_$_NSObject,
+	0, // (void *)&_objc_empty_cache,
+	0, // unused, was (void *)&_objc_empty_vtable,
+	&_OBJC_METACLASS_RO_$_Persion,
+};
+
+extern "C" __declspec(dllimport) struct _class_t OBJC_CLASS_$_NSObject;
+
+extern "C" __declspec(dllexport) struct _class_t OBJC_CLASS_$_Persion __attribute__ ((used, section ("__DATA,__objc_data"))) = {
+	0, // &OBJC_METACLASS_$_Persion,
+	0, // &OBJC_CLASS_$_NSObject,
+	0, // (void *)&_objc_empty_cache,
+	0, // unused, was (void *)&_objc_empty_vtable,
+	&_OBJC_CLASS_RO_$_Persion,
+};
+static void OBJC_CLASS_SETUP_$_Persion(void ) {
+	OBJC_METACLASS_$_Persion.isa = &OBJC_METACLASS_$_NSObject;
+	OBJC_METACLASS_$_Persion.superclass = &OBJC_METACLASS_$_NSObject;
+	OBJC_METACLASS_$_Persion.cache = &_objc_empty_cache;
+	OBJC_CLASS_$_Persion.isa = &OBJC_METACLASS_$_Persion;
+	OBJC_CLASS_$_Persion.superclass = &OBJC_CLASS_$_NSObject;
+	OBJC_CLASS_$_Persion.cache = &_objc_empty_cache;
+}
+#pragma section(".objc_inithooks$B", long, read, write)
+__declspec(allocate(".objc_inithooks$B")) static void *OBJC_CLASS_SETUP[] = {
+	(void *)&OBJC_CLASS_SETUP_$_Persion,
+};
+static struct _class_t *L_OBJC_LABEL_CLASS_$ [1] __attribute__((used, section ("__DATA, __objc_classlist,regular,no_dead_strip")))= {
+	&OBJC_CLASS_$_Persion,
+};
 static struct IMAGE_INFO { unsigned version; unsigned flag; } _OBJC_IMAGE_INFO = { 0, 2 };
