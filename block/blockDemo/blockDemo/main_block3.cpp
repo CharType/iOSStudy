@@ -32630,7 +32630,7 @@ struct NSUUID_IMPL {
 
 #pragma clang assume_nonnull end
 
-//    带有临时变量和静态变量的block转换之后
+//    auto变量和static变量的block转换之后
 //    int a = 10;
 //    static int b = 20;
 //    void (^block)(void) = ^{
@@ -32674,10 +32674,14 @@ int main(int argc, const char * argv[]) {
     /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool; 
         int a = 10;
         static int b = 20;
-        void (*block)(void) = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA, a, &b));
+        void (*block)(void) = &__main_block_impl_0(__main_block_func_0, &__main_block_desc_0_DATA, a, &b);
+        // 简化之前
+//        void (*block)(void) = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA, a, &b));
         a = 100;
         b = 200;
-        ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
+        (block->FuncPtr)(block);
+        // 简化之前
+//        ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
     }
     return 0;
 }

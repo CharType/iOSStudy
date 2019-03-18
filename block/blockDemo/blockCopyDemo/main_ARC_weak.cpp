@@ -106,7 +106,8 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_main_d912ec_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%d",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_main_f018a4_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"person.age = %ld",16};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_main_f018a4_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"person.age = %ld",16};
 
 
 
@@ -32633,21 +32634,45 @@ struct NSUUID_IMPL {
 /* @end */
 
 #pragma clang assume_nonnull end
-typedef void (*MyBlock)(void);
+#pragma clang assume_nonnull begin
 
-struct __Block_byref_age_0 {
-  void *__isa;
-__Block_byref_age_0 *__forwarding;
- int __flags;
- int __size;
- int age;
+
+#ifndef _REWRITER_typedef_MyPerson
+#define _REWRITER_typedef_MyPerson
+typedef struct objc_object MyPerson;
+typedef struct {} _objc_exc_MyPerson;
+#endif
+
+struct MyPerson_IMPL {
+	struct NSObject_IMPL NSObject_IVARS;
 };
+
+// @property (nonatomic, assign) NSInteger age;
+/* @end */
+
+#pragma clang assume_nonnull end
+typedef void (*MyBlock)(void);
+void test1();
+
+
+//MyPerson *person = [[MyPerson alloc] init];
+//person.age = 20;
+//__weak typeof(person) weakPerson = person;
+//MyBlock block = ^{
+//    NSLog(@"person.age = %ld", weakPerson.age);
+//};
+//
+//block();
+
+
+
+
 
 struct __main_block_impl_0 {
   struct __block_impl impl;
   struct __main_block_desc_0* Desc;
-  __Block_byref_age_0 *age; // by ref
-  __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, __Block_byref_age_0 *_age, int flags=0) : age(_age->__forwarding) {
+  MyPerson *__weak weakPerson;
+  __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, MyPerson *__weak _weakPerson, int flags=0) : weakPerson(_weakPerson) {
     impl.isa = &_NSConcreteStackBlock;
     impl.Flags = flags;
     impl.FuncPtr = fp;
@@ -32655,14 +32680,16 @@ struct __main_block_impl_0 {
   }
 };
 static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
-  __Block_byref_age_0 *age = __cself->age; // bound by ref
+  MyPerson *__weak weakPerson = __cself->weakPerson; // bound by copy
 
-            (age->__forwarding->age) = 20;
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_main_d912ec_mi_0,(age->__forwarding->age));
-        }
-static void __main_block_copy_0(struct __main_block_impl_0*dst, struct __main_block_impl_0*src) {_Block_object_assign((void*)&dst->age, (void*)src->age, 8/*BLOCK_FIELD_IS_BYREF*/);}
+                    NSLog((NSString *)&__NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_main_f018a4_mi_0, ((NSInteger (*)(id, SEL))(void *)objc_msgSend)((id)weakPerson, sel_registerName("age")));
+                }
 
-static void __main_block_dispose_0(struct __main_block_impl_0*src) {_Block_object_dispose((void*)src->age, 8/*BLOCK_FIELD_IS_BYREF*/);}
+// copy函数
+static void __main_block_copy_0(struct __main_block_impl_0*dst, struct __main_block_impl_0*src) {_Block_object_assign((void*)&dst->weakPerson, (void*)src->weakPerson, 3/*BLOCK_FIELD_IS_OBJECT*/);}
+
+// dispose函数
+static void __main_block_dispose_0(struct __main_block_impl_0*src) {_Block_object_dispose((void*)src->weakPerson, 3/*BLOCK_FIELD_IS_OBJECT*/);}
 
 static struct __main_block_desc_0 {
   size_t reserved;
@@ -32672,13 +32699,68 @@ static struct __main_block_desc_0 {
 } __main_block_desc_0_DATA = { 0, sizeof(struct __main_block_impl_0), __main_block_copy_0, __main_block_dispose_0};
 int main(int argc, const char * argv[]) {
     /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool; 
+        // MyPerson *person = [[MyPerson alloc] init];
+        MyPerson *person = ((MyPerson *(*)(id, SEL))(void *)objc_msgSend)((id)((MyPerson *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("MyPerson"), sel_registerName("alloc")), sel_registerName("init"));
+        // person.age = 20
+        ((void (*)(id, SEL, NSInteger))(void *)objc_msgSend)((id)person, sel_registerName("setAge:"), (NSInteger)20);
+        // __weak typeof(person) weakPerson = person;
+        __attribute__((objc_ownership(weak))) typeof(person) weakPerson = person;
+        // 定义block
+        MyBlock block = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA, weakPerson, 570425344));
+        // 调用block
+        ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
 
-        __attribute__((__blocks__(byref))) __Block_byref_age_0 age = {(void*)0,(__Block_byref_age_0 *)&age, 0, sizeof(__Block_byref_age_0), 10};
-
-        MyBlock block1 = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA, (__Block_byref_age_0 *)&age, 570425344));
-
-        ((void (*)(__block_impl *))((__block_impl *)block1)->FuncPtr)((__block_impl *)block1);
     }
     return 0;
+}
+
+
+struct __test1_block_impl_0 {
+  struct __block_impl impl;
+  struct __test1_block_desc_0* Desc;
+  MyPerson *__strong person;
+  __test1_block_impl_0(void *fp, struct __test1_block_desc_0 *desc, MyPerson *__strong _person, int flags=0) : person(_person) {
+    impl.isa = &_NSConcreteStackBlock;
+    impl.Flags = flags;
+    impl.FuncPtr = fp;
+    Desc = desc;
+  }
+};
+static void __test1_block_func_0(struct __test1_block_impl_0 *__cself) {
+  MyPerson *__strong person = __cself->person; // bound by copy
+
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_main_f018a4_mi_1, ((NSInteger (*)(id, SEL))(void *)objc_msgSend)((id)person, sel_registerName("age")));
+        }
+static void __test1_block_copy_0(struct __test1_block_impl_0*dst, struct __test1_block_impl_0*src) {_Block_object_assign((void*)&dst->person, (void*)src->person, 3/*BLOCK_FIELD_IS_OBJECT*/);}
+
+static void __test1_block_dispose_0(struct __test1_block_impl_0*src) {_Block_object_dispose((void*)src->person, 3/*BLOCK_FIELD_IS_OBJECT*/);}
+
+static struct __test1_block_desc_0 {
+  size_t reserved;
+  size_t Block_size;
+  void (*copy)(struct __test1_block_impl_0*, struct __test1_block_impl_0*);
+  void (*dispose)(struct __test1_block_impl_0*);
+} __test1_block_desc_0_DATA = { 0, sizeof(struct __test1_block_impl_0), __test1_block_copy_0, __test1_block_dispose_0};
+void test1() {
+
+    MyBlock block;
+    {
+        MyPerson *person = ((MyPerson *(*)(id, SEL))(void *)objc_msgSend)((id)((MyPerson *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("MyPerson"), sel_registerName("alloc")), sel_registerName("init"));
+        ((void (*)(id, SEL, NSInteger))(void *)objc_msgSend)((id)person, sel_registerName("setAge:"), (NSInteger)20);
+
+
+
+
+
+
+
+        block = ((void (*)())&__test1_block_impl_0((void *)__test1_block_func_0, &__test1_block_desc_0_DATA, person, 570425344));
+
+
+    }
+
+    ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
+
+
 }
 static struct IMAGE_INFO { unsigned version; unsigned flag; } _OBJC_IMAGE_INFO = { 0, 2 };

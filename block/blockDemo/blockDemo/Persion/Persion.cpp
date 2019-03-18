@@ -32698,6 +32698,7 @@ static struct __Persion__test1_block_desc_0 {
   void (*dispose)(struct __Persion__test1_block_impl_0*);
 } __Persion__test1_block_desc_0_DATA = { 0, sizeof(struct __Persion__test1_block_impl_0), __Persion__test1_block_copy_0, __Persion__test1_block_dispose_0};
 
+// test1函数
 static void _I_Persion_test1(Persion * self, SEL _cmd) {
     void (*test1Block)(void) = ((void (*)())&__Persion__test1_block_impl_0((void *)__Persion__test1_block_func_0, &__Persion__test1_block_desc_0_DATA, self, 570425344));
 }
@@ -32730,7 +32731,10 @@ static struct __Persion__test2_block_desc_0 {
   void (*dispose)(struct __Persion__test2_block_impl_0*);
 } __Persion__test2_block_desc_0_DATA = { 0, sizeof(struct __Persion__test2_block_impl_0), __Persion__test2_block_copy_0, __Persion__test2_block_dispose_0};
 
+// test2 方法
 static void _I_Persion_test2(Persion * self, SEL _cmd) {
+    
+    // test2Block self->_age
     void (*test2Block)(void) = ((void (*)())&__Persion__test2_block_impl_0((void *)__Persion__test2_block_func_0, &__Persion__test2_block_desc_0_DATA, self, 570425344));
 }
 

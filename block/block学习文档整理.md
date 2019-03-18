@@ -1,34 +1,71 @@
-##Block
-#### 使用clang 将OC代码转换为C++代码
-
-* xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc -fobjc-arc -fobjc-runtime=ios-8.0.0 main.m
-
+##Block分享
 
 ####block的本质：
-* block的本质是一个的OC对象，它是封装了函数和函数调用环境，它内部也有一个isa指针。
-* block的底层结构图：（待补充）
+* block的本质是一个的OC对象，内部有一个isa指针，它封装了函数和调用函数所需要的参数，block中有一个变量捕获机制，正是因为这个变量捕获机制，block才能封装函数的调用环境。
+* block的底层结构图：
+![](block的底层结构.png)
 
-####block的变量捕获机制
-##### 局部变量
-##### 静态变量
-##### 全局变量
-##### block会捕获self吗？
+####block的变量捕获(capture)
+* 为了保证在block内部能够访问外部变量，block有个变量的捕获机制。block对局部变量和全局变量的访问方式是不同的
+![](block的变量捕获机制介绍.png)
+* 在block中直接使用到成员变量为什么会捕获self?
+* 为什么局部auto变量和static变量的捕获机制不一样？
 
 ####block的类型
-* 可以调用class方法或者isa指针查看block的具体类型，最终都是继承NSBlock类型
-* block的3种类型。(在ARC和MRC下的区别)
-* 每种block类型存储区域
-* 每种类型的block调用了copy之后会有变化吗？
+* 可以通过调用class方法或者isa指针查看block的具体类型，最终都是继承NSBlock类型
 
-####block的copy
+* block的三种类型： __NSGlobalBlock__(没有访问auto变量),  __NSStackBlock__(访问了auto变量), __NSMallocBlock__（__NSStackBlock__类型的block调用了copy之后）
+* block每种类型在内存中存储的区域：
+![](block的存储区域.png)
+
 * 在ARC环境下，编译器会根据情况自动将栈上的block复制到堆上
 	* block作为参数返回值时
 	* block赋值给__strong指针时
 	* block作为Cocoa API中方法名含有usingBlock的方法参数时
 	* block作为GCD API的方法参数时 
 
----
-####__block的本质
-####block的内存管理
+* MRC下block属性修饰关键字一定要使用copy：
+	* @property (copy, nonatomic) void (^block)(void);
+	
+*ARC下Block属性修饰关键字建议使用copy(使用strong和使用copy的效果是一样的)：
+	* @property (strong, nonatomic) void (^block)(void);
+	* @property (copy, nonatomic) void (^block)(void);
+	 
+* 每种类型的block调用了多次copy之后：
+![](block被copy之后存储位置的变化.png)
 
-问题：捕获了OC对象或者捕获了使用__block修饰的临时变量的block结构体中为什么会有forwaring指针?
+* block内部访问了对象类型的auto变量时：
+	* 如果block是在栈上的时候，不会对auto变量产生强引用
+	* 如果block被copy到堆上的时候
+		* 会调用block内部的copy函数，copy函数会调用_Block_object_assign函数
+		* _Block_object_assign函数会根据auto变量的修饰符觉得是强引用或者弱引用。
+		 
+	* 如果block从堆上移除的时候
+		* 会调用block内部的dispose函数,dispose函数会调用_Block_object_dispose函数 
+		* _Block_object_dispose函数会自动对强引用的auto变量做一次release
+
+---
+#### __block
+* __block的本质
+	* __block可以用来解决在block内部无法修改auto变量的问题，编译器会将__block修饰的变量封装成一个对象。
+	* __block只能用来修饰auto变量，不能修饰static 和全局变量
+![](__block的本质.png)
+	* 捕获了OC对象或者捕获了使用__block修饰的临时变量的block结构体中为什么会有forwaring指针?
+![](__block的forwarding指针.png)
+* block对__block变量的内存管理
+	* block对__block变量的内存管理
+	* 当block栈上的时候并不会对__block变量产生强引用。 当block被copy到堆上的时候会调用block内部的copy函数，copy函数会调用_Block_object_assign函数，_Block_object_assign函数会对__block变量强引用。
+	* 当block从堆中移除的时候，会调用block的dispose函数，dispose函数会调用_Block_object_dispose函数,_Block_object_dispose函数会对__block变量做一次release 
+* __block变量对修饰的对象类型的内存管理
+	* 
+
+#### block的循环引用
+* block产生循环引用的原因
+* 解决block的循环引用的方法
+* 在MRC下的方法
+* 在ARC下的方法
+
+#### 使用clang 将OC代码转换为C++代码
+
+* xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc -fobjc-arc -fobjc-runtime=ios-8.0.0 main.m -o main_cpp.cpp
+

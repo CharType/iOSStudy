@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "MyPerson.h"
 typedef  void (^MyBlock)(void);
+void test1();
 
 //MyBlock test() {
 //    int a = 10;
@@ -16,39 +17,42 @@ typedef  void (^MyBlock)(void);
 //        NSLog(@"Hello a = %d", a);
 //    };
 //}
-
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
           
-      // 在ARC下block什么时候会对block进行copy?
-//        int a = 20;
-        // 当block赋值给一个强指针的时候。
-//        int a = 20;
-//        MyBlock block = ^{
-//            NSLog(@"Hello a = %d", a);
-//        };
-//        NSLog(@"%@",[block class]);
+        MyPerson *person = [[MyPerson alloc] init];
+        person.age = 20;
+        MyBlock block = ^{
+                    NSLog(@"person.age = %ld", person.age);
+                };
         
-        //block当做一个函数参数返回的时候
-//        MyBlock block = test();
-//        block();
-//        NSLog(@"%@",[block class]);
-//         GCD的block
-        
+        block();
+//        test1();
     }
     return 0;
 }
 
 void test1() {
+    // 在ARC或者MRC下有什么不同，分别使用强引用或者弱引用有什么不同
     MyBlock block;
     {
         MyPerson *person = [[MyPerson alloc] init];
-        __weak typeof(person) weakPerson = person;
+        person.age = 20;
+//        __weak typeof(person) weakPerson = person;
+//        block = ^{
+//            NSLog(@"person.age = %ld", person.age);
+//        };
+
+        // 在MRC下 block存储在栈区 不会对person对象强引用 block被copy的时候 会对person对象强引用
+//        __weak typeof(person) weakPerson = person;
         block = ^{
-            NSLog(@"person is a %@", weakPerson);
+            NSLog(@"person.age = %ld", person.age);
         };
-        //            [person release];
+        
+//        [person release];
     }
     
     block();
+    
+//    [block release];
 }
