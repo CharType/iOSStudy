@@ -81,17 +81,7 @@ int main(int argc, const char * argv[]) {
                 NSLog(@"person.age =  %ld",weakPerson.age);
             };
             
-            
-            NSLog(@" %@ %@",person.block ,[person.block copy]);
-            
-            
-            MyPerson *person2 = [[MyPerson alloc] init];
-            
-            person2.block = person.block;
-            NSLog(@" %@ %ld",person2.block ,[person2.block retainCount]);
-            
             [person release];
-            [person2 release];
         }
     }
     return 0;
