@@ -496,6 +496,7 @@ void _Block_object_assign(void *destArg, const void *object, const int flags) {
          __weak __block ... x;
          [^{ x; } copy];
          ********/
+        // 在MRC下不会持有这个对象 因为MRC下使用的是 MRC-unretained
         // 如果是__blockb对象，直接进行 __block的函数调用
         *dest = _Block_byref_copy(object);
         break;
@@ -540,18 +541,22 @@ void _Block_object_dispose(const void *object, const int flags) {
       case BLOCK_FIELD_IS_BYREF | BLOCK_FIELD_IS_WEAK:
       case BLOCK_FIELD_IS_BYREF:
         // get rid of the __block data structure held in a Block
+        // 如果是__block类型 调用 __block 的 _Block_byref_release 释放
         _Block_byref_release(object);
         break;
       case BLOCK_FIELD_IS_BLOCK:
+            // 如果是blcok类型 调用block的释放
         _Block_release(object);
         break;
       case BLOCK_FIELD_IS_OBJECT:
+            // 如果是OC对象类型 调用更深一层次的系统的方法
         _Block_release_object(object);
         break;
       case BLOCK_BYREF_CALLER | BLOCK_FIELD_IS_OBJECT:
       case BLOCK_BYREF_CALLER | BLOCK_FIELD_IS_BLOCK:
       case BLOCK_BYREF_CALLER | BLOCK_FIELD_IS_OBJECT | BLOCK_FIELD_IS_WEAK:
       case BLOCK_BYREF_CALLER | BLOCK_FIELD_IS_BLOCK  | BLOCK_FIELD_IS_WEAK:
+            // 其他 不处理
         break;
       default:
         break;
