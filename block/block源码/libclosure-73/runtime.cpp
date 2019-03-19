@@ -188,24 +188,33 @@ Internal Support routines for copying
 // Copy, or bump refcount, of a block.  If really copying, call the copy helper if present.
 void *_Block_copy(const void *arg) {
     struct Block_layout *aBlock;
-
+    // 如果参数传null 直接返回
     if (!arg) return NULL;
     
     // The following would be better done as a switch statement
+    // 将block对象转换成 Block_layout
     aBlock = (struct Block_layout *)arg;
+    
     if (aBlock->flags & BLOCK_NEEDS_FREE) {
         // latches on high
+        // 如果block已经在的堆上面
+        //retainCount 增加
         latching_incr_int(&aBlock->flags);
         return aBlock;
     }
+    // 如果是GLOBAL类型的block 直接reurn
     else if (aBlock->flags & BLOCK_IS_GLOBAL) {
         return aBlock;
     }
     else {
+        // 否则block是在栈上的block
         // Its a stack block.  Make a copy.
+        // 在堆上申请block需要存储的指定大小内存空间
         struct Block_layout *result =
             (struct Block_layout *)malloc(aBlock->descriptor->size);
+        // 内存申请失败直接return;
         if (!result) return NULL;
+        // 将函数的入参 NSStackBlock 数据搬移到新申请的堆内存上
         memmove(result, aBlock, aBlock->descriptor->size); // bitcopy first
 #if __has_feature(ptrauth_calls)
         // Resign the invoke pointer as it uses address authentication.
@@ -213,9 +222,12 @@ void *_Block_copy(const void *arg) {
 #endif
         // reset refcount
         result->flags &= ~(BLOCK_REFCOUNT_MASK|BLOCK_DEALLOCATING);    // XXX not needed
+        // 给block内部的标志位赋值  BLOCK_NEEDS_FREE  并增加retainCount
         result->flags |= BLOCK_NEEDS_FREE | 2;  // logical refcount 1
+        // 调用block内部的copy函数
         _Block_call_copy_helper(result, aBlock);
         // Set isa last so memory analysis tools see a fully-initialized object.
+        // 修改block的类型
         result->isa = _NSConcreteMallocBlock;
         return result;
     }
