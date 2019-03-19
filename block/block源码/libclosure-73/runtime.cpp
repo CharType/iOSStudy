@@ -472,7 +472,7 @@ void _Block_object_assign(void *destArg, const void *object, const int flags) {
         id object = ...;
         [^{ object; } copy];
         ********/
-
+        // 如果是OC对象 持有这个指针
         _Block_retain_object(object);
         *dest = object;
         break;
@@ -482,7 +482,7 @@ void _Block_object_assign(void *destArg, const void *object, const int flags) {
         void (^object)(void) = ...;
         [^{ object; } copy];
         ********/
-
+        // 如果是Block对象 直接进行block的copy函数调用
         *dest = _Block_copy(object);
         break;
     
@@ -496,7 +496,7 @@ void _Block_object_assign(void *destArg, const void *object, const int flags) {
          __weak __block ... x;
          [^{ x; } copy];
          ********/
-
+        // 如果是__blockb对象，直接进行 __block的函数调用
         *dest = _Block_byref_copy(object);
         break;
         
@@ -510,7 +510,7 @@ void _Block_object_assign(void *destArg, const void *object, const int flags) {
          __block void (^object)(void);
          [^{ object; } copy];
          ********/
-
+        // 其他类型 直接赋值
         *dest = object;
         break;
 
@@ -524,7 +524,7 @@ void _Block_object_assign(void *destArg, const void *object, const int flags) {
          __weak __block void (^object)(void);
          [^{ object; } copy];
          ********/
-
+            // 其他类型 直接赋值
         *dest = object;
         break;
 

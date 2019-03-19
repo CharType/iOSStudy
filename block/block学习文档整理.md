@@ -84,3 +84,7 @@
 
 #### block源码地址
 [点击这里下载](https://opensource.apple.com/tarballs/libclosure/)
+
+####疑问点：
+* block进行多次copy之后 在MRC环境下 打印block的retainCount 一直都是1，但是看blcok的源码的时候，进行多次copy 引用计数器确实会增加的
+* 在MRC环境下blcok为什么不会对__block变量进行强引用，没有找到MRC环境下的源码。
