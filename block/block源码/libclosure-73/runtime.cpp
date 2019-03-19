@@ -294,20 +294,27 @@ static struct Block_byref *_Block_byref_copy(const void *arg) {
     return src->forwarding;
 }
 
+// __block变量的release
 static void _Block_byref_release(const void *arg) {
+    // 类型转换
     struct Block_byref *byref = (struct Block_byref *)arg;
 
     // dereference the forwarding pointer since the compiler isn't doing this anymore (ever?)
+    // 获取forwarding指针 如果传进来的是栈区block，保证获取到的是copy过后的block地址
     byref = byref->forwarding;
     
     if (byref->flags & BLOCK_BYREF_NEEDS_FREE) {
+        // 如果这个block是在存储的z堆区
         int32_t refcount = byref->flags & BLOCK_REFCOUNT_MASK;
         os_assert(refcount);
+        // latching_decr_int_should_deallocate() 返回是否需要释放 会使retainCount减少
         if (latching_decr_int_should_deallocate(&byref->flags)) {
             if (byref->flags & BLOCK_BYREF_HAS_COPY_DISPOSE) {
+                // 如果有dispose函数，调用dispose函数
                 struct Block_byref_2 *byref2 = (struct Block_byref_2 *)(byref+1);
                 (*byref2->byref_destroy)(byref);
             }
+            // 释放这个__block对象
             free(byref);
         }
     }
