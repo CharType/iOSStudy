@@ -220,11 +220,11 @@ void *_Block_copy(const void *arg) {
         // Resign the invoke pointer as it uses address authentication.
         result->invoke = aBlock->invoke;
 #endif
-        // reset refcount
+        // reset refcount // 没看懂
         result->flags &= ~(BLOCK_REFCOUNT_MASK|BLOCK_DEALLOCATING);    // XXX not needed
-        // 给block内部的标志位赋值  BLOCK_NEEDS_FREE  并增加retainCount
+        // 给block内部的标志位赋值  BLOCK_NEEDS_FREE（表示block已经在堆上了）  并增加retainCount
         result->flags |= BLOCK_NEEDS_FREE | 2;  // logical refcount 1
-        // 调用block内部的copy函数
+        // _Block_call_copy_helper 这个函数会检查block结构体中是否有copy函数 如果有就调用block内部的copy函数
         _Block_call_copy_helper(result, aBlock);
         // Set isa last so memory analysis tools see a fully-initialized object.
         // 修改block的类型
@@ -314,17 +314,24 @@ static void _Block_byref_release(const void *arg) {
 #pragma mark SPI/API
 #endif
 
-
+// block释放过程
 // API entry point to release a copied Block
 void _Block_release(const void *arg) {
+    // 将block转换为 Block_layout指针
     struct Block_layout *aBlock = (struct Block_layout *)arg;
+    // 转换结果为null直接return;
     if (!aBlock) return;
+    //如果block是global类型, 不需要做free
     if (aBlock->flags & BLOCK_IS_GLOBAL) return;
+    // 如果block标志位标记结果不在堆上， 不需要做free 直接return
     if (! (aBlock->flags & BLOCK_NEEDS_FREE)) return;
 
+    // latching_decr_int_should_deallocate() 返回是否需要释放 会使retainCount减少
     if (latching_decr_int_should_deallocate(&aBlock->flags)) {
+        // 调用block结构体内部的的dispose函数
         _Block_call_dispose_helper(aBlock);
         _Block_destructInstance(aBlock);
+        //释放block
         free(aBlock);
     }
 }
