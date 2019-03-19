@@ -240,17 +240,24 @@ void *_Block_copy(const void *arg) {
 // Closures that aren't copied must still work, so everyone always accesses variables after dereferencing the forwarding ptr.
 // We ask if the byref pointer that we know about has already been copied to the heap, and if so, increment and return it.
 // Otherwise we need to copy it and update the stack forwarding pointer
+// __block变量的copy
 static struct Block_byref *_Block_byref_copy(const void *arg) {
     struct Block_byref *src = (struct Block_byref *)arg;
 
     if ((src->forwarding->flags & BLOCK_REFCOUNT_MASK) == 0) {
         // src points to stack
+        // 申请指定的内存空间
         struct Block_byref *copy = (struct Block_byref *)malloc(src->size);
+        // 复制数据
         copy->isa = NULL;
         // byref value 4 is logical refcount of 2: one for caller, one for stack
+        // 标记已经copy在堆上，引用计数器直接增加
         copy->flags = src->flags | BLOCK_BYREF_NEEDS_FREE | 4;
+        // 将堆空间__block变量的forwarding指针变量指向自己
         copy->forwarding = copy; // patch heap copy to point to itself
+        // 将栈空间__block变量的forwarding指针指向堆空间__block变量的地址
         src->forwarding = copy;  // patch stack to point to heap copy
+        // 赋值block的size
         copy->size = src->size;
 
         if (src->flags & BLOCK_BYREF_HAS_COPY_DISPOSE) {
@@ -258,15 +265,18 @@ static struct Block_byref *_Block_byref_copy(const void *arg) {
             // If more than one field shows up in a byref block this is wrong XXX
             struct Block_byref_2 *src2 = (struct Block_byref_2 *)(src+1);
             struct Block_byref_2 *copy2 = (struct Block_byref_2 *)(copy+1);
+            // 复制copy函数地址
             copy2->byref_keep = src2->byref_keep;
+            // 复制dispose函数地址
             copy2->byref_destroy = src2->byref_destroy;
 
             if (src->flags & BLOCK_BYREF_LAYOUT_EXTENDED) {
                 struct Block_byref_3 *src3 = (struct Block_byref_3 *)(src2+1);
                 struct Block_byref_3 *copy3 = (struct Block_byref_3*)(copy2+1);
+                // __block封装的对象的指针
                 copy3->layout = src3->layout;
             }
-
+            // 调用__block内部的copy函数
             (*src2->byref_keep)(copy, src);
         }
         else {
@@ -275,11 +285,12 @@ static struct Block_byref *_Block_byref_copy(const void *arg) {
             memmove(copy+1, src+1, src->size - sizeof(*src));
         }
     }
-    // already copied to heap
+    // __block变量标志位标记已经在堆上， retainCount的处理
     else if ((src->forwarding->flags & BLOCK_BYREF_NEEDS_FREE) == BLOCK_BYREF_NEEDS_FREE) {
         latching_incr_int(&src->forwarding->flags);
     }
     
+    // 返回栈区block上的forwarding的指针。
     return src->forwarding;
 }
 

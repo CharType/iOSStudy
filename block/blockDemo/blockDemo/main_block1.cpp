@@ -32637,10 +32637,10 @@ struct NSUUID_IMPL {
 //        block();
 
 struct __block_impl {
-    void *isa;
-    int Flags;
-    int Reserved;
-    void *FuncPtr;
+    void *isa;// block的类型
+    int Flags;  // 保存了引用计数的地址
+    int Reserved;// 保留字段 0 未使用
+    void *FuncPtr;// 函数地址
 };
 
 struct __main_block_impl_0 {
