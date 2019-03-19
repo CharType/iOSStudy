@@ -8,6 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
+struct __main_block_impl_0 {
+    struct __block_impl impl;
+    struct __main_block_desc_0* Desc;
+    // blok捕获的b变量
+    int a;
+    int *b
+    NSObject *__strong object;
+}
+
+static struct __main_block_desc_0 {
+    size_t reserved;// 保留参数
+    size_t Block_size;
+    void *copy;
+    void *dispose;
+}
+
 void (^block)(void);
 int a = 10;
 static int b = 20;

@@ -13,6 +13,7 @@ int c = 100;
 static int d = 200;
 void test1(void);
 void test2(void);
+void test3(void);
 typedef void (^MyBlock)(void);
 
 MyBlock block10;
@@ -47,8 +48,9 @@ struct __main_block_impl_0 {
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        test1();
-//        test2();
+//        test1();
+        test2();
+//          test3();
     }
     return 0;
 }
@@ -64,6 +66,7 @@ void test1(){
     NSLog(@"%@", [[block1 class] superclass]); // __NSGlobalBlock
     NSLog(@"%@", [[[block1 class] superclass] superclass]); //NSBlock
     NSLog(@"%@", [[[[block1 class] superclass] superclass] superclass]); // NSObject
+    NSLog(@"block地址：NSGlobalBlock - %@", block1);
     
     
     Class block1Class = object_getClass(block1);
@@ -76,17 +79,24 @@ void test1(){
     int a = 10;
     void (^block2)(void) = ^{
         NSLog(@"hello a = %d", a);
+        NSLog(@"hello c = %d", c);
     };
     NSLog(@"-----访问局部变量的block类型--------");
     NSLog(@"%@", [block2 class]); //__NSMallocBlock__
     NSLog(@"%@", [[block2 class] superclass]);//__NSMallocBlock
     NSLog(@"%@", [[[block2 class] superclass] superclass]);//NSBlock
     NSLog(@"%@", [[[[block2 class] superclass] superclass] superclass]);//NSObject
+    NSLog(@"block地址：NSMallocBlock - %@", block2);
     
     int age = 20;
     NSLog(@"%@",[^{
         NSLog(@"hello, %d", age);
     } class]); // __NSStackBlock__
+    
+    
+    NSLog(@"block地址：NSStackBlock - %@",^{
+        NSLog(@"hello, %d", age);
+    }); // __NSStackBlock__
     
     // 访问静态变量的block类型
     static int b = 10;
@@ -111,6 +121,37 @@ void test1(){
     NSLog(@"%@",[^{
         NSLog(@"hello a = %d",a);
     } class]);
+}
+
+
+MyBlock tets4 () {
+    int a = 20;
+    MyBlock block = ^{
+        NSLog(@"%d", a);
+    };
+    return block;
+}
+
+void test3() {
+    int a = 10;
+    MyBlock block = ^{
+        NSLog(@"%d", a);
+    };
+    NSLog(@"%@", [block class]);
+    // MRC: __NSStackBlock__
+    // ARC: __NSMallocBlock__
+    
+    //    [block release];
+    
+    MyBlock block1 = tets4();
+    NSLog(@"%@", [block1 class]);
+    // MRC: __NSStackBlock__
+    // ARC: __NSMallocBlock__
+    
+    int age = 20;
+    NSLog(@"%@",[^{
+        NSLog(@"hello, %d", age);
+    } class]); // __NSStackBlock__
 }
 
 void test2() {
@@ -152,18 +193,18 @@ void test2() {
 //    NSLog(@"block7 %@",block7);
     
     
-//    NSLog(@"block3 retainCount %ld", [block3 retainCount]);
-//    NSLog(@"block2 retainCount %ld", [block2 retainCount]);
-//    NSLog(@"block3 retainCount %ld", [[block3 copy] retainCount]);
-//    NSLog(@"block3 retainCount %ld", [[[block3 copy] copy] retainCount]);
-//    NSLog(@"block3 retainCount %ld", [[[[block3 copy] copy] copy] retainCount]);
+    NSLog(@"block3 retainCount %ld", [block3 retainCount]);
+    NSLog(@"block2 retainCount %ld", [block2 retainCount]);
+    NSLog(@"block3 retainCount %ld", [[block3 copy] retainCount]);
+    NSLog(@"block3 retainCount %ld", [[[block3 copy] copy] retainCount]);
+    NSLog(@"block3 retainCount %ld", [[[[block3 copy] copy] copy] retainCount]);
     
-//    MyBlock block8 = [[[[[block3 copy] copy] copy] copy] copy];
-//    MyBlock block9 = [block8 copy];
-//    NSLog(@"block8 retainCount %ld", [block8 retainCount]);
-//    NSLog(@"block9 retainCount %ld", [block9 retainCount]);
-//    block10 = [[[[[block3 copy] copy] copy] copy] copy];
-//    NSLog(@"block10 retainCount %ld", [block10 retainCount]);
+    MyBlock block8 = [[[[[block3 copy] copy] copy] copy] copy];
+    MyBlock block9 = [block8 copy];
+    NSLog(@"block8 retainCount %ld", [block8 retainCount]);
+    NSLog(@"block9 retainCount %ld", [block9 retainCount]);
+    block10 = [[[[[block3 copy] copy] copy] copy] copy];
+    NSLog(@"block10 retainCount %ld", [block10 retainCount]);
     
     
 };

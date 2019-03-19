@@ -14,12 +14,12 @@ typedef  void (^MyBlock)(void);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-//        __block int age = 10;
+        __block int age = 10;
 //        MyBlock block = ^{
 //            age = 20;
 //            NSLog(@"%d",age);
 //        };
-//        // 这里直接访问age是访问的哪个age值？
+        // 这里直接访问age是访问的哪个age值？
 //        NSLog(@"%p",blockImpl->age); //  0x10062f0e0
 //        NSLog(@"%p",&age);// 0x10062f0f8
         
@@ -38,10 +38,10 @@ int main(int argc, const char * argv[]) {
         MyBlock block;
         {
            __block MyPerson *person = [[MyPerson alloc] init];
-//            __block __weak typeof(person) weakPerson = person;
+            __block __weak typeof(person) weakPerson = person;
             
             block = ^{
-                NSLog(@"%@",person);
+                NSLog(@"%@",weakPerson);
             };
             [person release];
         }

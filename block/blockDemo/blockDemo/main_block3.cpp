@@ -32638,7 +32638,7 @@ struct NSUUID_IMPL {
 //    };
 //    a = 100;
 //    b = 200;
-//    block();
+//    block(); // a = 10 b = 200
 
 struct __block_impl {
     void *isa;

@@ -19,7 +19,7 @@
 ![](block的存储区域.png)
 
 * 在ARC环境下，编译器会根据情况自动将栈上的block复制到堆上
-	* block作为参数返回值时
+	* block作为函数的返回值时
 	* block赋值给__strong指针时
 	* block作为Cocoa API中方法名含有usingBlock的方法参数时
 	* block作为GCD API的方法参数时 
@@ -38,7 +38,7 @@
 	* 如果block是在栈上的时候，不会对auto变量产生强引用
 	* 如果block被copy到堆上的时候
 		* 会调用block内部的copy函数，copy函数会调用_Block_object_assign函数
-		* _Block_object_assign函数会根据auto变量的修饰符觉得是强引用或者弱引用。
+		* _Block_object_assign函数会根据auto变量的修饰符决定得是强引用或者弱引用。
 		 
 	* 如果block从堆上移除的时候
 		* 会调用block内部的dispose函数,dispose函数会调用_Block_object_dispose函数 
@@ -57,13 +57,26 @@
 	* 当block栈上的时候并不会对__block变量产生强引用。 当block被copy到堆上的时候会调用block内部的copy函数，copy函数会调用_Block_object_assign函数，_Block_object_assign函数会对__block变量强引用。
 	* 当block从堆中移除的时候，会调用block的dispose函数，dispose函数会调用_Block_object_dispose函数,_Block_object_dispose函数会对__block变量做一次release 
 * __block变量对修饰的对象类型的内存管理
-	* 
+	* __block变量在栈上的时候不会对__block内部的变量产生强引用
+	* 当__block变量被copy到堆上的时候 会调用__block变量内部的copy方法。 copy方法会调用 _Block_object_assign 函数，_Block_object_assign函数会根据所指向对象的修饰符决定是强指针还是弱指针（仅仅是ARC环境下，在MRC环境下一定不会retain）
+	* 当__block变量从堆上移除的时候会调用__block变量内部的dospose函数， dispose函数会调用_Block_object_dispose，_Block_object_dispose会对指向的对象做一次release
 
 #### block的循环引用
 * block产生循环引用的原因
+* 在block中使用了self或者成员变量
+![](在block中使用成员变量的循环引用.png)
+* __block变量产生的循环引用
+![](__block变量的循环引用.png)
+
 * 解决block的循环引用的方法
+* 在ARC下的方法：
+
+	1. __weak、__unsafe_unretained 关键字来解决循环引用
+	2. 使用__block变量来解决循环引用（必须要调用block）
+
 * 在MRC下的方法
-* 在ARC下的方法
+	* 使用__unsafe_unretained 或者__block来解决循环引用 
+
 
 #### 使用clang 将OC代码转换为C++代码
 
