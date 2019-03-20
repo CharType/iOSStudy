@@ -285,7 +285,7 @@ static struct Block_byref *_Block_byref_copy(const void *arg) {
             memmove(copy+1, src+1, src->size - sizeof(*src));
         }
     }
-    // __block变量标志位标记已经在堆上， retainCount的处理
+    // __block变量已经标记需要释放， 直接处理retainCount
     else if ((src->forwarding->flags & BLOCK_BYREF_NEEDS_FREE) == BLOCK_BYREF_NEEDS_FREE) {
         latching_incr_int(&src->forwarding->flags);
     }
@@ -549,7 +549,7 @@ void _Block_object_dispose(const void *object, const int flags) {
         _Block_release(object);
         break;
       case BLOCK_FIELD_IS_OBJECT:
-            // 如果是OC对象类型 调用更深一层次的系统的方法
+            // 如果是OC Object类型 调用更深一层次的系统的方法
         _Block_release_object(object);
         break;
       case BLOCK_BYREF_CALLER | BLOCK_FIELD_IS_OBJECT:
