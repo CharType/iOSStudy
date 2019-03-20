@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTypeDemo/main.m"
-            timestampString = "574705186.4033329"
+            timestampString = "574793634.720415"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Block__blockDemo/main.m"
-            timestampString = "574620868.075636"
+            timestampString = "574793634.720524"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Block__blockDemo/main.m"
-            timestampString = "574620868.076032"
+            timestampString = "574793634.720571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "main"
             landmarkType = "9">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Block_&#x5faa;&#x73af;&#x5f15;&#x7528;/main.m"
-            timestampString = "574705186.404425"
+            timestampString = "574793634.720616"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "main"
             landmarkType = "9">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Block_&#x5faa;&#x73af;&#x5f15;&#x7528;/main.m"
-            timestampString = "574705186.4045219"
+            timestampString = "574793634.720657"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "main"
             landmarkType = "9">
          </BreakpointContent>
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTypeDemo/main.m"
-            timestampString = "574705186.404739"
+            timestampString = "574793634.720696"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "146"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTypeDemo/main.m"
-            timestampString = "574705186.4051681"
+            timestampString = "574793634.720737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
@@ -138,45 +138,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTypeDemo/main.m"
-            timestampString = "574705186.405437"
+            timestampString = "574793634.720776"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "97"
             endingLineNumber = "97"
             landmarkName = "test1"
             landmarkType = "9">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "test1"
-                  moduleName = "BlockTypeDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengqian/Desktop/%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/iOSStudy/block/blockDemo/BlockTypeDemo/main.m"
-                  timestampString = "574705189.111102"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "910">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__test1_block_invoke_4"
-                  moduleName = "BlockTypeDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengqian/Desktop/%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/iOSStudy/block/blockDemo/BlockTypeDemo/main.m"
-                  timestampString = "574705189.113853"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "19">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -186,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTypeDemo/main.m"
-            timestampString = "574705186.405746"
+            timestampString = "574793634.720814"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
@@ -202,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTypeDemo/main.m"
-            timestampString = "574705186.40627"
+            timestampString = "574793634.720853"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "test2"
             landmarkType = "9">
          </BreakpointContent>
@@ -234,13 +202,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Block__blockDemo/main.m"
-            timestampString = "574620868.077723"
+            timestampString = "574793634.720932"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
             endingLineNumber = "38"
             landmarkName = "main"
             landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "blockDemo/main.m"
+            timestampString = "574793634.720975"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "main"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "blockDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chengqian/Desktop/%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/iOSStudy/block/blockDemo/blockDemo/main.m"
+                  timestampString = "574793635.033518"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__main_block_invoke"
+                  moduleName = "blockDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chengqian/Desktop/%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/iOSStudy/block/blockDemo/blockDemo/main.m"
+                  timestampString = "574793635.035166"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

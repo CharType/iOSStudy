@@ -8,21 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-struct __main_block_impl_0 {
-    struct __block_impl impl;
-    struct __main_block_desc_0* Desc;
-    // blok捕获的b变量
-    int a;
-    int *b
-    NSObject *__strong object;
-}
 
-static struct __main_block_desc_0 {
-    size_t reserved;// 保留参数
-    size_t Block_size;
-    void *copy;
-    void *dispose;
-}
 
 void (^block)(void);
 int a = 10;
@@ -88,9 +74,19 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
 //        test1();
 //        test2();
-        test3();
+//        test3();
+//        block();
         
-        block();
+        int a;
+        void (^test3Block)(void) = ^{
+            //        *a = 20;
+            NSLog(@"%d", a);
+        };
+        
+        *a = 100;
+        
+        test3Block();
+        
     }
     return 0;
 }

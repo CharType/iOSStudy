@@ -29,14 +29,14 @@
 
 * 在ARC环境下，编译器会根据情况自动将栈上的block复制到堆上
 	* block作为函数的返回值时
-	* block赋值给__strong指针时
+	* block赋值给\_\_strong指针时
 	* block作为Cocoa API中方法名含有usingBlock的方法参数时
 	* block作为GCD API的方法参数时 
 
 * MRC下block属性修饰关键字一定要使用copy：
 	* @property (copy, nonatomic) void (^block)(void);
 	
-*ARC下Block属性修饰关键字建议使用copy(使用strong和使用copy的效果是一样的)：
+* ARC下Block属性修饰关键字建议使用copy(使用strong和使用copy的效果是一样的)：
 	* @property (strong, nonatomic) void (^block)(void);
 	* @property (copy, nonatomic) void (^block)(void);
 	 
@@ -54,10 +54,10 @@
 		* _Block_object_dispose函数会自动对强引用的auto变量做一次release
 
 ---
-#### __block
-* __block的本质
-	* __block可以用来解决在block内部无法修改auto变量的问题，编译器会将__block修饰的变量封装成一个对象。
-	* __block只能用来修饰auto变量，不能修饰static 和全局变量
+#### \_\_block
+* \_\_block的本质
+	* \_\_block可以用来解决在block内部无法修改auto变量的问题，编译器会将__block修饰的变量封装成一个对象。
+	* \_\_block只能用来修饰auto变量，不能修饰static 和全局变量
 ![](__block的本质.png)
 	* 捕获了OC对象或者捕获了使用__block修饰的临时变量的block结构体中为什么会有forwaring指针?
 ![](__block的forwarding指针.png)
@@ -65,26 +65,26 @@
 	* block对__block变量的内存管理
 	* 当block栈上的时候并不会对__block变量产生强引用。 当block被copy到堆上的时候会调用block内部的copy函数，copy函数会调用_Block_object_assign函数，_Block_object_assign函数会对__block变量强引用。
 	* 当block从堆中移除的时候，会调用block的dispose函数，dispose函数会调用_Block_object_dispose函数,_Block_object_dispose函数会对__block变量做一次release 
-* __block变量对修饰的对象类型的内存管理
-	* __block变量在栈上的时候不会对__block内部的变量产生强引用
-	* 当__block变量被copy到堆上的时候 会调用__block变量内部的copy方法。 copy方法会调用 _Block_object_assign 函数，_Block_object_assign函数会根据所指向对象的修饰符决定是强指针还是弱指针（仅仅是ARC环境下，在MRC环境下一定不会retain）
-	* 当__block变量从堆上移除的时候会调用__block变量内部的dospose函数， dispose函数会调用_Block_object_dispose，_Block_object_dispose会对指向的对象做一次release
+* \_\_block变量对修饰的对象类型的内存管理
+	* \_\_block变量在栈上的时候不会对\_\_block内部的变量产生强引用
+	* 当\_\_block变量被copy到堆上的时候 会调用\_\_block变量内部的copy方法。 copy方法会调用 \_Block_object_assign 函数，\_Block_object_assign函数会根据所指向对象的修饰符决定是强指针还是弱指针（仅仅是ARC环境下，在MRC环境下一定不会retain）
+	* 当\_\_block变量从堆上移除的时候会调用\_\_block变量内部的dospose函数， dispose函数会调用\_Block_object_dispose，\_Block_object_dispose会对指向的对象做一次release
 
 #### block的循环引用
 * block产生循环引用的原因
 * 在block中使用了self或者成员变量
 ![](在block中使用成员变量的循环引用.png)
-* __block变量产生的循环引用
+* \_\_block变量产生的循环引用
 ![](__block变量的循环引用.png)
 
 * 解决block的循环引用的方法
 * 在ARC下的方法：
 
-	1. __weak、__unsafe_unretained 关键字来解决循环引用
-	2. 使用__block变量来解决循环引用（必须要调用block）
+	1. \_\_weak、\_\_unsafe_unretained 关键字来解决循环引用
+	2. 使用\_\_block变量来解决循环引用（必须要调用block）
 
 * 在MRC下的方法
-	* 使用__unsafe_unretained 或者__block来解决循环引用 
+	* 使用\_\_unsafe_unretained 或者\_\_block来解决循环引用 
 
 
 #### 使用clang 将OC代码转换为C++代码
@@ -96,4 +96,8 @@
 
 ####疑问点：
 * block进行多次copy之后 在MRC环境下 打印block的retainCount 一直都是1，但是看blcok的源码的时候，进行多次copy 引用计数器确实会增加的
-* 在MRC环境下blcok为什么不会对__block变量进行强引用，没有找到MRC环境下的源码
+
+#### 开发中注意事项
+* 如果可以不用block，最好不要使用block
+* 如果可以不用__block，最好不要使用__block变量
+* 使用block一定要注意循环引用的问题
