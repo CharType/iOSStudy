@@ -14,7 +14,7 @@ typedef  void (^MyBlock)(void);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        __block int age = 10;
+//        __block int age = 10;
 //        MyBlock block = ^{
 //            age = 20;
 //            NSLog(@"%d",age);
@@ -24,30 +24,32 @@ int main(int argc, const char * argv[]) {
 //        NSLog(@"%p",&age);// 0x10062f0f8
         
         
-//        __block int age = 10;
-//        __block  NSObject *object = [[NSObject alloc] init];
-//        MyBlock block = ^{
-//            age = 20;
-//            NSLog(@"%d",age);
-//            NSLog(@"%@",object);
-//        };
+        __block int age = 10;
+        __block  NSObject *object = [[NSObject alloc] init];
+        MyBlock block = ^{
+            age = 20;
+            NSLog(@"%d",age);// 20
+            NSLog(@"%@",object);
+        };
+        block();
+        NSLog(@"%d",age);// 20
         
 //        __block MyPerson *person = [[MyPerson alloc] init];
 //        __block __weak typeof(person) weakPerson = person;
         
-        MyBlock block;
-        {
-           __block MyPerson *person = [[MyPerson alloc] init];
-            __block __weak typeof(person) weakPerson = person;
-            
-            block = ^{
-                NSLog(@"%@",weakPerson);
-            };
-//            [person release];
-        }
+//        MyBlock block;
+//        {
+//           __block MyPerson *person = [[MyPerson alloc] init];
+//            __block __weak typeof(person) weakPerson = person;
+//
+//            block = ^{
+//                NSLog(@"%@",weakPerson);
+//            };
+////            [person release];
+//        }
         
         
-        block();
+//        block();
         
     }
     return 0;

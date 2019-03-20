@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 
-
 void (^block)(void);
 int a = 10;
 static int b = 20;
@@ -76,17 +75,6 @@ int main(int argc, const char * argv[]) {
 //        test2();
 //        test3();
 //        block();
-        
-        int a;
-        void (^test3Block)(void) = ^{
-            //        *a = 20;
-            NSLog(@"%d", a);
-        };
-        
-        *a = 100;
-        
-        test3Block();
-        
     }
     return 0;
 }

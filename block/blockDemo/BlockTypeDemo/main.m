@@ -49,14 +49,15 @@ struct __main_block_impl_0 {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 //        test1();
-        test2();
-//          test3();
+//        test2();
+        test3();
     }
     return 0;
 }
 
 void test1(){
-    
+    int autoAge = 20;
+    static int staticAge = 30;
     // 没有访问局部变量的block类型
     void (^block1)(void) = ^{
         NSLog(@"hello");
@@ -67,12 +68,17 @@ void test1(){
     NSLog(@"%@", [[[block1 class] superclass] superclass]); //NSBlock
     NSLog(@"%@", [[[[block1 class] superclass] superclass] superclass]); // NSObject
     NSLog(@"block地址：NSGlobalBlock - %@", block1);
+    // 输出 block地址：NSGlobalBlock - <__NSGlobalBlock__: 0x100002090>
+    NSLog(@"static局部变量的存储区域：%p", &staticAge);
+    // 输出 static局部变量的存储区域：0x1000026b4
     
     
     Class block1Class = object_getClass(block1);
-    NSLog(@"%@",block1Class);//__NSGlobalBlock__
+    NSLog(@"%@",block1Class);
+    // 输出__NSGlobalBlock__
     Class block1MetaClass = object_getClass(block1Class);
-    NSLog(@"%@ isMetaClass %d",block1MetaClass,class_isMetaClass(block1MetaClass)); // __NSGlobalBlock__ isMetaClass 1
+    NSLog(@"%@ isMetaClass %d",block1MetaClass,class_isMetaClass(block1MetaClass));
+    //输出 __NSGlobalBlock__ isMetaClass 1
     
     
     // 访问局部变量的block类型
@@ -87,6 +93,7 @@ void test1(){
     NSLog(@"%@", [[[block2 class] superclass] superclass]);//NSBlock
     NSLog(@"%@", [[[[block2 class] superclass] superclass] superclass]);//NSObject
     NSLog(@"block地址：NSMallocBlock - %@", block2);
+    // 输出 block地址：NSMallocBlock - <__NSMallocBlock__: 0x1005005d0>
     
     int age = 20;
     NSLog(@"%@",[^{
@@ -94,9 +101,10 @@ void test1(){
     } class]); // __NSStackBlock__
     
     
-    NSLog(@"block地址：NSStackBlock - %@",^{
+    NSLog(@"block地址：NSStackBlock - %@ auto变量的存储地址是：%p",^{
         NSLog(@"hello, %d", age);
-    }); // __NSStackBlock__
+    }, &autoAge);
+    // 输出 block地址：NSStackBlock - <__NSStackBlock__: 0x7ffeefbff4b8> auto变量的存储地址是：0x7ffeefbff55c
     
     // 访问静态变量的block类型
     static int b = 10;
@@ -118,9 +126,6 @@ void test1(){
     NSLog(@"%@", [[[block4 class] superclass] superclass]);// NSBlock
     NSLog(@"%@", [[[[block4 class] superclass] superclass] superclass]);// NSObject
     
-    NSLog(@"%@",[^{
-        NSLog(@"hello a = %d",a);
-    } class]);
 }
 
 
@@ -151,7 +156,8 @@ void test3() {
     int age = 20;
     NSLog(@"%@",[^{
         NSLog(@"hello, %d", age);
-    } class]); // __NSStackBlock__
+    } class]);
+    // __NSStackBlock__
 }
 
 void test2() {
