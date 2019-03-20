@@ -224,7 +224,7 @@ void *_Block_copy(const void *arg) {
         result->flags &= ~(BLOCK_REFCOUNT_MASK|BLOCK_DEALLOCATING);    // XXX not needed
         // 给block内部的标志位赋值  BLOCK_NEEDS_FREE（表示block已经在堆上了）  并增加retainCount
         result->flags |= BLOCK_NEEDS_FREE | 2;  // logical refcount 1
-        // _Block_call_copy_helper 这个函数会检查block结构体中是否有copy函数 如果有就调用block内部的copy函数
+        // _Block_call_copy_helper 这个函数会检查block结构体中是否有copy函数 如果有就调用block内部的copy函数 (最终会调用这个函数 _Block_object_assign)
         _Block_call_copy_helper(result, aBlock);
         // Set isa last so memory analysis tools see a fully-initialized object.
         // 修改block的类型
@@ -497,7 +497,7 @@ void _Block_object_assign(void *destArg, const void *object, const int flags) {
          [^{ x; } copy];
          ********/
         // 在MRC下不会持有这个对象 因为MRC下使用的是 MRC-unretained
-        // 如果是__blockb对象，直接进行 __block的函数调用
+        // 如果是__blockb对象，直接进行 _Block_byref_copy函数调用
         *dest = _Block_byref_copy(object);
         break;
         
