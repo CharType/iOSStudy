@@ -14,7 +14,16 @@
 ####block的类型
 * 可以通过调用class方法或者isa指针查看block的具体类型，最终都是继承NSBlock类型
 
-* block的三种类型： __NSGlobalBlock__(没有访问auto变量),  __NSStackBlock__(访问了auto变量), __NSMallocBlock__（__NSStackBlock__类型的block调用了copy之后）
+* block的三种类型： 
+
+
+| block的类型 				| 				环境         |
+| 	  -------- 			| 			----- 	         |
+| \_\_NSGlobalBlock__  | 	没有访问auto变量        |
+| \_\_NSStackBlock__   |   访问了auto变量         |
+| \_\_NSMallocBlock__  |    \_\_NSStackBlock__ 调用了copy之后   |
+
+
 * block每种类型在内存中存储的区域：
 ![](block的存储区域.png)
 
@@ -87,4 +96,4 @@
 
 ####疑问点：
 * block进行多次copy之后 在MRC环境下 打印block的retainCount 一直都是1，但是看blcok的源码的时候，进行多次copy 引用计数器确实会增加的
-* 在MRC环境下blcok为什么不会对__block变量进行强引用，没有找到MRC环境下的源码。
+* 在MRC环境下blcok为什么不会对__block变量进行强引用，没有找到MRC环境下的源码
