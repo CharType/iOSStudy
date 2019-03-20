@@ -43,7 +43,7 @@ int main(int argc, const char * argv[]) {
             block = ^{
                 NSLog(@"%@",weakPerson);
             };
-            [person release];
+//            [person release];
         }
         
         

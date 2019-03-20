@@ -185,26 +185,26 @@ void test2() {
     MyBlock block5 = [block4 copy];
     MyBlock block6 = [block5 copy];
     MyBlock block7 = [block6 copy];
-//    NSLog(@"block2 %@",block2);
-//    NSLog(@"block3 %@",block3);
-//    NSLog(@"block4 %@",block4);
-//    NSLog(@"block5 %@",block5);
-//    NSLog(@"block6 %@",block6);
-//    NSLog(@"block7 %@",block7);
+    NSLog(@"block2 %@",block2);
+    NSLog(@"block3 %@",block3);
+    NSLog(@"block4 %@",block4);
+    NSLog(@"block5 %@",block5);
+    NSLog(@"block6 %@",block6);
+    NSLog(@"block7 %@",block7);
     
     
-    NSLog(@"block3 retainCount %ld", [block3 retainCount]);
-    NSLog(@"block2 retainCount %ld", [block2 retainCount]);
-    NSLog(@"block3 retainCount %ld", [[block3 copy] retainCount]);
-    NSLog(@"block3 retainCount %ld", [[[block3 copy] copy] retainCount]);
-    NSLog(@"block3 retainCount %ld", [[[[block3 copy] copy] copy] retainCount]);
-    
-    MyBlock block8 = [[[[[block3 copy] copy] copy] copy] copy];
-    MyBlock block9 = [block8 copy];
-    NSLog(@"block8 retainCount %ld", [block8 retainCount]);
-    NSLog(@"block9 retainCount %ld", [block9 retainCount]);
-    block10 = [[[[[block3 copy] copy] copy] copy] copy];
-    NSLog(@"block10 retainCount %ld", [block10 retainCount]);
+//    NSLog(@"block3 retainCount %ld", [block3 retainCount]);
+//    NSLog(@"block2 retainCount %ld", [block2 retainCount]);
+//    NSLog(@"block3 retainCount %ld", [[block3 copy] retainCount]);
+//    NSLog(@"block3 retainCount %ld", [[[block3 copy] copy] retainCount]);
+//    NSLog(@"block3 retainCount %ld", [[[[block3 copy] copy] copy] retainCount]);
+//
+//    MyBlock block8 = [[[[[block3 copy] copy] copy] copy] copy];
+//    MyBlock block9 = [block8 copy];
+//    NSLog(@"block8 retainCount %ld", [block8 retainCount]);
+//    NSLog(@"block9 retainCount %ld", [block9 retainCount]);
+//    block10 = [[[[[block3 copy] copy] copy] copy] copy];
+//    NSLog(@"block10 retainCount %ld", [block10 retainCount]);
     
     
 };
