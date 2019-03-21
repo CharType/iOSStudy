@@ -214,7 +214,7 @@ void *_Block_copy(const void *arg) {
             (struct Block_layout *)malloc(aBlock->descriptor->size);
         // 内存申请失败直接return;
         if (!result) return NULL;
-        // 将函数的入参 NSStackBlock 数据搬移到新申请的堆内存上
+        // 将函数的入参 NSStackBlock 数据复制到新申请的堆内存上
         memmove(result, aBlock, aBlock->descriptor->size); // bitcopy first
 #if __has_feature(ptrauth_calls)
         // Resign the invoke pointer as it uses address authentication.
