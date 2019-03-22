@@ -1,17 +1,19 @@
 ##Block分享
 
-####block的本质：
+[toc]
+
+### block的本质：
 * block的本质是一个的OC对象，内部有一个isa指针，它封装了函数和调用函数所需要的参数，block中有一个变量捕获机制，正是因为这个变量捕获机制，block才能封装函数的调用环境。
 * block的底层结构图：
 ![](block的底层结构.png)
 
-####block的变量捕获(capture)
+###block的变量捕获(capture)
 * 为了保证在block内部能够访问外部变量，block有个变量的捕获机制。block对局部变量和全局变量的访问方式是不同的
 ![](block的变量捕获机制介绍.png)
 * 在block中直接使用到成员变量为什么会捕获self?
 * 为什么局部auto变量和static变量的捕获机制不一样？
 
-####block的类型
+###block的类型
 * 可以通过调用class方法或者isa指针查看block的具体类型，最终都是继承NSBlock类型
 
 * block的三种类型： 
@@ -54,7 +56,8 @@
 		* _Block_object_dispose函数会自动对强引用的auto变量做一次release
 
 ---
-#### \_\_block
+
+### \_\_block
 * \_\_block的本质
 	* \_\_block可以用来解决在block内部无法修改auto变量的问题，编译器会将__block修饰的变量封装成一个对象。
 	* \_\_block只能用来修饰auto变量，不能修饰static 和全局变量
@@ -70,11 +73,16 @@
 	* 当\_\_block变量被copy到堆上的时候 会调用\_\_block变量内部的copy方法。 copy方法会调用 \_Block_object_assign 函数，\_Block_object_assign函数会根据所指向对象的修饰符决定是强指针还是弱指针（仅仅是ARC环境下，在MRC环境下一定不会retain）
 	* 当\_\_block变量从堆上移除的时候会调用\_\_block变量内部的dospose函数， dispose函数会调用\_Block_object_dispose，\_Block_object_dispose会对指向的对象做一次release
 
-#### block的循环引用
+---
+
+### block的循环引用
 * block产生循环引用的原因
 * 在block中使用了self或者成员变量
 ![](在block中使用成员变量的循环引用.png)
 * \_\_block变量产生的循环引用
+* \_\_block变量持有对象
+* 对象持有block
+* block持有__block
 ![](__block变量的循环引用.png)
 
 * 解决block的循环引用的方法
@@ -87,17 +95,11 @@
 	* 使用\_\_unsafe_unretained 或者\_\_block来解决循环引用 
 
 
-#### 使用clang 将OC代码转换为C++代码
-
+### 其他
+* 使用clang 将OC代码转换为C++代码
 * xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc -fobjc-arc -fobjc-runtime=ios-8.0.0 main.m -o main_cpp.cpp
 
-#### block源码地址
+* block源码地址
 [点击这里下载](https://opensource.apple.com/tarballs/libclosure/)
 
-####疑问点：
-* block进行多次copy之后 在MRC环境下 打印block的retainCount 一直都是1，但是看blcok的源码的时候，进行多次copy 引用计数器确实会增加的
 
-#### 开发中注意事项
-* 如果可以不用block，最好不要使用block
-* 如果可以不用__block，最好不要使用__block变量
-* 使用block一定要注意循环引用的问题

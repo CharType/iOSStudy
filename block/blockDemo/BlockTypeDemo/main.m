@@ -48,9 +48,9 @@ struct __main_block_impl_0 {
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-//        test1();
+        test1();
 //        test2();
-        test3();
+//        test3();
     }
     return 0;
 }
@@ -71,6 +71,9 @@ void test1(){
     // 输出 block地址：NSGlobalBlock - <__NSGlobalBlock__: 0x100002090>
     NSLog(@"static局部变量的存储区域：%p", &staticAge);
     // 输出 static局部变量的存储区域：0x1000026b4
+    
+    NSObject *object = [[NSObject alloc] init];
+    NSLog(@"%@",object);
     
     
     Class block1Class = object_getClass(block1);
