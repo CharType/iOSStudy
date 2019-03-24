@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 
 
-void (^block)(void);
+void (^Myblock)(void);
 int a = 10;
 static int b = 20;
 
-void test1() {
+//void test1() {
     //        带有参数的block main_block2.cpp
 //            void (^block)(int, int) = ^(int a, int b) {
 //                NSLog(@"a = %d b = %d", a, b);
@@ -25,10 +25,10 @@ void test1() {
 //                NSLog(@"Hello, World!");
 //            };
 //            block();
-}
+//}
 
-void test2() {
-    
+//void test2() {
+
     //    block的变量捕获机制
     
     
@@ -51,22 +51,22 @@ void test2() {
     //    block();
     
     
-}
+//}
 
-void test3() {
-    
-    static int d;
-    {
-        int c = 10;
-        block = ^{
-            NSLog(@"c = %d d = %d", c, d);
-        };
-        d = 20;
-        
-    }
-    
-    d = 40;
-}
+//void test3() {
+//
+//    static int d;
+//    {
+//        int c = 10;
+//        block = ^{
+//            NSLog(@"c = %d d = %d", c, d);
+//        };
+//        d = 20;
+//
+//    }
+//
+//    d = 40;
+//}
 
 
 int main(int argc, const char * argv[]) {
@@ -75,6 +75,22 @@ int main(int argc, const char * argv[]) {
 //        test2();
 //        test3();
 //        block();
+        int c = 10;
+        NSObject *strongObject = [[NSObject alloc] init];
+        void (^testBlock)(void) =  ^{
+            NSLog(@"c = %d", c);
+            NSLog(@"strongObject = %@", strongObject);
+        };
+        
+        
+        __weak NSObject *weakObject = strongObject;
+        
+        void (^block)(void) = ^{
+            NSLog(@"c = %d d strongObject =  %@ weakObject = %@", c, strongObject, weakObject);
+            NSLog(@"testBlock = %@",testBlock);
+        };
+        
+        [block copy];
     }
     return 0;
 }

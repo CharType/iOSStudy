@@ -71,6 +71,7 @@
 		3B0B036E22381F1600DDEF4D /* main_block2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_block2.cpp; sourceTree = "<group>"; };
 		3B0B037322395B7F00DDEF4D /* Block_循环引用 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Block_循环引用"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0B037522395B7F00DDEF4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B226A05224805F7001D110E /* main_block5.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_block5.cpp; sourceTree = "<group>"; };
 		3B3C3D1922284547001F915B /* blockDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = blockDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3C3D1C22284547001F915B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3B3C3D232228495F001F915B /* main_block1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_block1.cpp; sourceTree = "<group>"; };
@@ -179,6 +180,7 @@
 				3B3C3D242228530B001F915B /* main_block2.cpp */,
 				3B3C3D26222CE7DF001F915B /* main_block3.cpp */,
 				3B3C3D27222D83E2001F915B /* main_block4.cpp */,
+				3B226A05224805F7001D110E /* main_block5.cpp */,
 			);
 			path = blockDemo;
 			sourceTree = "<group>";

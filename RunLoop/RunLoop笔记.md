@@ -48,7 +48,7 @@
 * sources0:触摸事件处理,performSelector:onThread:
 * sources1:基于Port的线程间通信
 * Timers：NSTimer,performSelector:withObject:afterDelay:
-* Observers
+* Observers:用于监听RunLoop的各种状态，UI刷新（BeforeWaiting）,Autorelease pool (BeforeWaiting)
 ![RunLoop的各种状态](RunLoop的各种状态.png)
 
 ###RunLoop的运行逻辑
