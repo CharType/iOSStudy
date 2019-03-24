@@ -48,8 +48,8 @@ struct __main_block_impl_0 {
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        test1();
-//        test2();
+//        test1();
+        test2();
 //        test3();
     }
     return 0;
@@ -171,17 +171,22 @@ void test2() {
         NSLog(@"hello");
     };
     NSLog(@"block1 class %@", [block1 class]);
+    // __NSGlobalBlock__
     NSLog(@"NSGlobalBlockl类型的block copy之后的类型是:");
     NSLog(@"block1 copy class =  %@", [[block1 copy] class]);
+    // __NSGlobalBlock__
     
     int a = 10;
     MyBlock block2 = ^{
         NSLog(@"a = %d", a);
     };
     NSLog(@"block2 %@",block2);
+    // block2 <__NSMallocBlock__: 0x10060da60>
     NSLog(@"block2:%@ block2 class %@",block2, [block2 class]);
+    // block2:<__NSMallocBlock__: 0x10060da60> block2 class __NSMallocBlock__
     NSLog(@"NSStackBlock类型的block copy之后的类型是:");
     NSLog(@"block2 copy class %@", [[block2 copy] class]);
+    // block2 copy class __NSMallocBlock
     
     
     MyBlock block3 = [block2 copy];
