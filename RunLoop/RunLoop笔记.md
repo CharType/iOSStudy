@@ -16,5 +16,43 @@
 * RunLoop会在线程结束的时候销毁。
 * 主线程的RunLoop已经自动创建，子线程默认没有开启RunLoop。
 
+###获取RunLoop对象
+* Foundation
+	* [NSRunLoop currentRunLoop]; 获取当前线程的RunLoop对象
+	* [NSRunLoop mainRunLoop];获取主线程的RunLoop对象
+
+* CoreFoundation
+	* CFRunLoopFetCurrent();获取当前线程的RunLoop对象
+	* CFRunLoopGetMain(); 获得主线程的RunLoop对象
+
+###CFRunLoop的底层结构
+* RunLoop相关的类
+	* CFRunLoopRef
+	* CFRunLoopModeRef
+	* CFRunLoopSourceRef 
+	* CFRunLoopSourceTimerRef
+	* CFRunLoopObserverRef
+
+![](CFRunLoop的底层结构图.png) 
+
+* CFRunLoopModeRef代表RunLoop的运行模式
+* 一个RunLoop会包含若干个Mode，每个Mode又包含很多个Source0/Source1/Timer/Observer
+* RunLoop启动时只能选择其中一个Mode作为currentMode
+* 如果要切换Mode,只能退出当前的Loop，再重新选择一个Mode进入
+	* 不同Mode的Source0/Source1/Timer/Observer能分隔开来，互不影响
+* 如果Mode里没有任何Source0/Source1/Timer/Observer,RunLoop会立马退出 (怎么才能测试一下)
+* 常见的2中Mode
+	* kCFRunLoopDefaultMode(NSDefaultRunLoopModel) :app默认的Model,通常主线程是在这个Model下运行
+	* UITrackingRunLoopMode:界面跟踪Model,用于ScrollView追踪触摸滑动，保证界面滑动的时候不受其他Model影响
+
+* sources0:触摸事件处理,performSelector:onThread:
+* sources1:基于Port的线程间通信
+* Timers：NSTimer,performSelector:withObject:afterDelay:
+* Observers
+![RunLoop的各种状态](RunLoop的各种状态.png)
+
+###RunLoop的运行逻辑
+s
+
 
 
