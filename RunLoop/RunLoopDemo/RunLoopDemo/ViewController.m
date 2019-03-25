@@ -80,7 +80,7 @@ void obseverRunLoopActicities(CFRunLoopObserverRef ref,CFRunLoopActivity activit
         NSLog(@"dispatch_after");
     });
     
-    NSObject performSelector:<#(nonnull SEL)#> withObject:<#(nullable id)#> afterDelay:<#(NSTimeInterval)#>
+    [self performSelector:@selector(task) withObject:nil afterDelay:3];
     
     CFRunLoopPerformBlock(CFRunLoopGetCurrent(), kCFRunLoopDefaultMode, ^{
         NSLog(@"CFRunLoopPerformBlock");
@@ -92,5 +92,8 @@ void obseverRunLoopActicities(CFRunLoopObserverRef ref,CFRunLoopActivity activit
     NSLog(@"touchesBegan");
 }
 
+- (void)task {
+    NSLog(@"task");
+}
 
 @end
