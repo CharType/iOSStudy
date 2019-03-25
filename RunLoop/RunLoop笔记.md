@@ -52,7 +52,22 @@
 ![RunLoop的各种状态](RunLoop的各种状态.png)
 
 ###RunLoop的运行逻辑
-s
+* 01、通知Observers:进入loop
+* 02、通知Observers:即将处理Timers
+* 03、通知Observers:即将处理Sources
+* 04、处理blocks
+* 05、处理Sources0（处理完Sources0可能会再次处理Blocks）
+* 06、如果存在Sources1，就跳转到第8步
+* 07、通知Observers:开始休眠（等待消息唤醒）
+* 08、通知Observers:结束休眠 (被某个消息唤醒)
+	* 01、处理Timer
+	* 02、处理GCD AsyncToMainQueue
+	* 03、处理Source1
+* 09、处理blocks
+* 10、根据前面的执行结果，决定如何操作
+	* 01 回到第02步 
+	* 02 退出Loop
+* 11、通知Observers:退出Loop 
 
 
 

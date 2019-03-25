@@ -76,7 +76,7 @@ void obseverRunLoopActicities(CFRunLoopObserverRef ref,CFRunLoopActivity activit
 //    });
     CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopCommonModes);
     CFRelease(observer);
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_global_queue(0, 0), ^{
         NSLog(@"dispatch_after");
     });
     
