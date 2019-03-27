@@ -17,7 +17,7 @@
 @implementation TWOViewController
 
 - (void)dealloc {
-    [self performSelector:@selector(stopThreadAction) onThread:self.thread withObject:nil waitUntilDone:NO];
+    [self performSelector:@selector(stopThreadAction) onThread:self.thread withObject:nil waitUntilDone:YES];
     NSLog(@"%s", __func__);
 }
 
@@ -29,6 +29,12 @@
     self.thread = [[ZTHThread alloc] initWithBlock:^{
         NSLog(@"task1 begin");
         [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
+//        CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+//            NSLog(@"runloop的状态发生了改变");
+//
+//        });
+//        CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopCommonModes);
+//        CFRelease(observer);
         while (weakSelf && !weakSelf.stopThread) {
             [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
         }
@@ -43,10 +49,14 @@
 }
 
 - (void)test {
+   
     NSLog(@"%s thread = %@", __func__, [NSThread currentThread]);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (self.stopThread) {
+        return;
+    }
     [self performSelector:@selector(test) onThread:self.thread withObject:self waitUntilDone:NO];
 }
 

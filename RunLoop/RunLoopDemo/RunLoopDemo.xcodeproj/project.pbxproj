@@ -17,6 +17,16 @@
 		3BAF8280224551D3003E6DFD /* RunLoopDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF827F224551D3003E6DFD /* RunLoopDemoUITests.m */; };
 		3BD2E9AA224B14F800A7AB38 /* ZTHThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2E9A9224B14F800A7AB38 /* ZTHThread.m */; };
 		3BD2E9AD224B18EF00A7AB38 /* TWOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2E9AC224B18EF00A7AB38 /* TWOViewController.m */; };
+		3BD2E9B6224B4B0400A7AB38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2E9B5224B4B0400A7AB38 /* AppDelegate.m */; };
+		3BD2E9B9224B4B0400A7AB38 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2E9B8224B4B0400A7AB38 /* ViewController.m */; };
+		3BD2E9BC224B4B0400A7AB38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD2E9BA224B4B0400A7AB38 /* Main.storyboard */; };
+		3BD2E9BE224B4B0500A7AB38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD2E9BD224B4B0500A7AB38 /* Assets.xcassets */; };
+		3BD2E9C1224B4B0500A7AB38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD2E9BF224B4B0500A7AB38 /* LaunchScreen.storyboard */; };
+		3BD2E9C4224B4B0500A7AB38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2E9C3224B4B0500A7AB38 /* main.m */; };
+		3BD2E9CE224B4B0600A7AB38 /* ZTHThreadDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2E9CD224B4B0600A7AB38 /* ZTHThreadDemoTests.m */; };
+		3BD2E9D9224B4B0600A7AB38 /* ZTHThreadDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2E9D8224B4B0600A7AB38 /* ZTHThreadDemoUITests.m */; };
+		3BD2E9E7224B4C7100A7AB38 /* ZTHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2E9E6224B4C7100A7AB38 /* ZTHViewController.m */; };
+		3BD2E9EA224B4CD000A7AB38 /* ZTHSerialThreadObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2E9E9224B4CD000A7AB38 /* ZTHSerialThreadObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +43,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3BAF8257224551D1003E6DFD;
 			remoteInfo = RunLoopDemo;
+		};
+		3BD2E9CA224B4B0600A7AB38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BAF8250224551D1003E6DFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BD2E9B1224B4B0400A7AB38;
+			remoteInfo = ZTHThreadDemo;
+		};
+		3BD2E9D5224B4B0600A7AB38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BAF8250224551D1003E6DFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BD2E9B1224B4B0400A7AB38;
+			remoteInfo = ZTHThreadDemo;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -57,6 +81,26 @@
 		3BD2E9A9224B14F800A7AB38 /* ZTHThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTHThread.m; sourceTree = "<group>"; };
 		3BD2E9AB224B18EF00A7AB38 /* TWOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWOViewController.h; sourceTree = "<group>"; };
 		3BD2E9AC224B18EF00A7AB38 /* TWOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWOViewController.m; sourceTree = "<group>"; };
+		3BD2E9B2224B4B0400A7AB38 /* ZTHThreadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZTHThreadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD2E9B4224B4B0400A7AB38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3BD2E9B5224B4B0400A7AB38 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3BD2E9B7224B4B0400A7AB38 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3BD2E9B8224B4B0400A7AB38 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3BD2E9BB224B4B0400A7AB38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BD2E9BD224B4B0500A7AB38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BD2E9C0224B4B0500A7AB38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BD2E9C2224B4B0500A7AB38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BD2E9C3224B4B0500A7AB38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3BD2E9C9224B4B0600A7AB38 /* ZTHThreadDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZTHThreadDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD2E9CD224B4B0600A7AB38 /* ZTHThreadDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTHThreadDemoTests.m; sourceTree = "<group>"; };
+		3BD2E9CF224B4B0600A7AB38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BD2E9D4224B4B0600A7AB38 /* ZTHThreadDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZTHThreadDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD2E9D8224B4B0600A7AB38 /* ZTHThreadDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTHThreadDemoUITests.m; sourceTree = "<group>"; };
+		3BD2E9DA224B4B0600A7AB38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BD2E9E5224B4C7100A7AB38 /* ZTHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTHViewController.h; sourceTree = "<group>"; };
+		3BD2E9E6224B4C7100A7AB38 /* ZTHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTHViewController.m; sourceTree = "<group>"; };
+		3BD2E9E8224B4CD000A7AB38 /* ZTHSerialThreadObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTHSerialThreadObject.h; sourceTree = "<group>"; };
+		3BD2E9E9224B4CD000A7AB38 /* ZTHSerialThreadObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTHSerialThreadObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +125,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BD2E9AF224B4B0400A7AB38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD2E9C6224B4B0600A7AB38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD2E9D1224B4B0600A7AB38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -90,6 +155,9 @@
 				3BAF825A224551D1003E6DFD /* RunLoopDemo */,
 				3BAF8273224551D3003E6DFD /* RunLoopDemoTests */,
 				3BAF827E224551D3003E6DFD /* RunLoopDemoUITests */,
+				3BD2E9B3224B4B0400A7AB38 /* ZTHThreadDemo */,
+				3BD2E9CC224B4B0600A7AB38 /* ZTHThreadDemoTests */,
+				3BD2E9D7224B4B0600A7AB38 /* ZTHThreadDemoUITests */,
 				3BAF8259224551D1003E6DFD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,6 +168,9 @@
 				3BAF8258224551D1003E6DFD /* RunLoopDemo.app */,
 				3BAF8270224551D3003E6DFD /* RunLoopDemoTests.xctest */,
 				3BAF827B224551D3003E6DFD /* RunLoopDemoUITests.xctest */,
+				3BD2E9B2224B4B0400A7AB38 /* ZTHThreadDemo.app */,
+				3BD2E9C9224B4B0600A7AB38 /* ZTHThreadDemoTests.xctest */,
+				3BD2E9D4224B4B0600A7AB38 /* ZTHThreadDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +211,44 @@
 				3BAF8281224551D3003E6DFD /* Info.plist */,
 			);
 			path = RunLoopDemoUITests;
+			sourceTree = "<group>";
+		};
+		3BD2E9B3224B4B0400A7AB38 /* ZTHThreadDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3BD2E9B4224B4B0400A7AB38 /* AppDelegate.h */,
+				3BD2E9B5224B4B0400A7AB38 /* AppDelegate.m */,
+				3BD2E9B7224B4B0400A7AB38 /* ViewController.h */,
+				3BD2E9B8224B4B0400A7AB38 /* ViewController.m */,
+				3BD2E9E5224B4C7100A7AB38 /* ZTHViewController.h */,
+				3BD2E9E6224B4C7100A7AB38 /* ZTHViewController.m */,
+				3BD2E9BA224B4B0400A7AB38 /* Main.storyboard */,
+				3BD2E9BD224B4B0500A7AB38 /* Assets.xcassets */,
+				3BD2E9BF224B4B0500A7AB38 /* LaunchScreen.storyboard */,
+				3BD2E9C2224B4B0500A7AB38 /* Info.plist */,
+				3BD2E9C3224B4B0500A7AB38 /* main.m */,
+				3BD2E9E8224B4CD000A7AB38 /* ZTHSerialThreadObject.h */,
+				3BD2E9E9224B4CD000A7AB38 /* ZTHSerialThreadObject.m */,
+			);
+			path = ZTHThreadDemo;
+			sourceTree = "<group>";
+		};
+		3BD2E9CC224B4B0600A7AB38 /* ZTHThreadDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				3BD2E9CD224B4B0600A7AB38 /* ZTHThreadDemoTests.m */,
+				3BD2E9CF224B4B0600A7AB38 /* Info.plist */,
+			);
+			path = ZTHThreadDemoTests;
+			sourceTree = "<group>";
+		};
+		3BD2E9D7224B4B0600A7AB38 /* ZTHThreadDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3BD2E9D8224B4B0600A7AB38 /* ZTHThreadDemoUITests.m */,
+				3BD2E9DA224B4B0600A7AB38 /* Info.plist */,
+			);
+			path = ZTHThreadDemoUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +307,59 @@
 			productReference = 3BAF827B224551D3003E6DFD /* RunLoopDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		3BD2E9B1224B4B0400A7AB38 /* ZTHThreadDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BD2E9DB224B4B0600A7AB38 /* Build configuration list for PBXNativeTarget "ZTHThreadDemo" */;
+			buildPhases = (
+				3BD2E9AE224B4B0400A7AB38 /* Sources */,
+				3BD2E9AF224B4B0400A7AB38 /* Frameworks */,
+				3BD2E9B0224B4B0400A7AB38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZTHThreadDemo;
+			productName = ZTHThreadDemo;
+			productReference = 3BD2E9B2224B4B0400A7AB38 /* ZTHThreadDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3BD2E9C8224B4B0600A7AB38 /* ZTHThreadDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BD2E9DE224B4B0600A7AB38 /* Build configuration list for PBXNativeTarget "ZTHThreadDemoTests" */;
+			buildPhases = (
+				3BD2E9C5224B4B0600A7AB38 /* Sources */,
+				3BD2E9C6224B4B0600A7AB38 /* Frameworks */,
+				3BD2E9C7224B4B0600A7AB38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BD2E9CB224B4B0600A7AB38 /* PBXTargetDependency */,
+			);
+			name = ZTHThreadDemoTests;
+			productName = ZTHThreadDemoTests;
+			productReference = 3BD2E9C9224B4B0600A7AB38 /* ZTHThreadDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3BD2E9D3224B4B0600A7AB38 /* ZTHThreadDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BD2E9E1224B4B0600A7AB38 /* Build configuration list for PBXNativeTarget "ZTHThreadDemoUITests" */;
+			buildPhases = (
+				3BD2E9D0224B4B0600A7AB38 /* Sources */,
+				3BD2E9D1224B4B0600A7AB38 /* Frameworks */,
+				3BD2E9D2224B4B0600A7AB38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BD2E9D6224B4B0600A7AB38 /* PBXTargetDependency */,
+			);
+			name = ZTHThreadDemoUITests;
+			productName = ZTHThreadDemoUITests;
+			productReference = 3BD2E9D4224B4B0600A7AB38 /* ZTHThreadDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -218,6 +380,17 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 3BAF8257224551D1003E6DFD;
 					};
+					3BD2E9B1224B4B0400A7AB38 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					3BD2E9C8224B4B0600A7AB38 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3BD2E9B1224B4B0400A7AB38;
+					};
+					3BD2E9D3224B4B0600A7AB38 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3BD2E9B1224B4B0400A7AB38;
+					};
 				};
 			};
 			buildConfigurationList = 3BAF8253224551D1003E6DFD /* Build configuration list for PBXProject "RunLoopDemo" */;
@@ -236,6 +409,9 @@
 				3BAF8257224551D1003E6DFD /* RunLoopDemo */,
 				3BAF826F224551D3003E6DFD /* RunLoopDemoTests */,
 				3BAF827A224551D3003E6DFD /* RunLoopDemoUITests */,
+				3BD2E9B1224B4B0400A7AB38 /* ZTHThreadDemo */,
+				3BD2E9C8224B4B0600A7AB38 /* ZTHThreadDemoTests */,
+				3BD2E9D3224B4B0600A7AB38 /* ZTHThreadDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,6 +435,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3BAF8279224551D3003E6DFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD2E9B0224B4B0400A7AB38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD2E9C1224B4B0500A7AB38 /* LaunchScreen.storyboard in Resources */,
+				3BD2E9BE224B4B0500A7AB38 /* Assets.xcassets in Resources */,
+				3BD2E9BC224B4B0400A7AB38 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD2E9C7224B4B0600A7AB38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD2E9D2224B4B0600A7AB38 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -296,6 +496,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BD2E9AE224B4B0400A7AB38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD2E9B9224B4B0400A7AB38 /* ViewController.m in Sources */,
+				3BD2E9EA224B4CD000A7AB38 /* ZTHSerialThreadObject.m in Sources */,
+				3BD2E9C4224B4B0500A7AB38 /* main.m in Sources */,
+				3BD2E9B6224B4B0400A7AB38 /* AppDelegate.m in Sources */,
+				3BD2E9E7224B4C7100A7AB38 /* ZTHViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD2E9C5224B4B0600A7AB38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD2E9CE224B4B0600A7AB38 /* ZTHThreadDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD2E9D0224B4B0600A7AB38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD2E9D9224B4B0600A7AB38 /* ZTHThreadDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -308,6 +536,16 @@
 			isa = PBXTargetDependency;
 			target = 3BAF8257224551D1003E6DFD /* RunLoopDemo */;
 			targetProxy = 3BAF827C224551D3003E6DFD /* PBXContainerItemProxy */;
+		};
+		3BD2E9CB224B4B0600A7AB38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BD2E9B1224B4B0400A7AB38 /* ZTHThreadDemo */;
+			targetProxy = 3BD2E9CA224B4B0600A7AB38 /* PBXContainerItemProxy */;
+		};
+		3BD2E9D6224B4B0600A7AB38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BD2E9B1224B4B0400A7AB38 /* ZTHThreadDemo */;
+			targetProxy = 3BD2E9D5224B4B0600A7AB38 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -324,6 +562,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				3BAF8267224551D3003E6DFD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3BD2E9BA224B4B0400A7AB38 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BD2E9BB224B4B0400A7AB38 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3BD2E9BF224B4B0500A7AB38 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BD2E9C0224B4B0500A7AB38 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -545,6 +799,108 @@
 			};
 			name = Release;
 		};
+		3BD2E9DC224B4B0600A7AB38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZTHThreadDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.www.ZTHThreadDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BD2E9DD224B4B0600A7AB38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZTHThreadDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.www.ZTHThreadDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3BD2E9DF224B4B0600A7AB38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZTHThreadDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.www.ZTHThreadDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZTHThreadDemo.app/ZTHThreadDemo";
+			};
+			name = Debug;
+		};
+		3BD2E9E0224B4B0600A7AB38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZTHThreadDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.www.ZTHThreadDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZTHThreadDemo.app/ZTHThreadDemo";
+			};
+			name = Release;
+		};
+		3BD2E9E2224B4B0600A7AB38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZTHThreadDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.www.ZTHThreadDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZTHThreadDemo;
+			};
+			name = Debug;
+		};
+		3BD2E9E3224B4B0600A7AB38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZTHThreadDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.www.ZTHThreadDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZTHThreadDemo;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -580,6 +936,33 @@
 			buildConfigurations = (
 				3BAF828B224551D3003E6DFD /* Debug */,
 				3BAF828C224551D3003E6DFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BD2E9DB224B4B0600A7AB38 /* Build configuration list for PBXNativeTarget "ZTHThreadDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BD2E9DC224B4B0600A7AB38 /* Debug */,
+				3BD2E9DD224B4B0600A7AB38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BD2E9DE224B4B0600A7AB38 /* Build configuration list for PBXNativeTarget "ZTHThreadDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BD2E9DF224B4B0600A7AB38 /* Debug */,
+				3BD2E9E0224B4B0600A7AB38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BD2E9E1224B4B0600A7AB38 /* Build configuration list for PBXNativeTarget "ZTHThreadDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BD2E9E2224B4B0600A7AB38 /* Debug */,
+				3BD2E9E3224B4B0600A7AB38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
