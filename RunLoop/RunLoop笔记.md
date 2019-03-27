@@ -69,5 +69,9 @@
 	* 02 退出Loop
 * 11、通知Observers:退出Loop 
 
+![](RunLoop的执行逻辑图.png)
+
+###RunLoop的线程保活
+
 
 

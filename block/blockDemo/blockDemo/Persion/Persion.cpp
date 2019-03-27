@@ -32720,6 +32720,7 @@ static void __Persion__test2_block_func_0(struct __Persion__test2_block_impl_0 *
 
         NSLog((NSString *)&__NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_Persion_cadc31_mi_1, (*(int *)((char *)self + OBJC_IVAR_$_Persion$_age)));
     }
+
 static void __Persion__test2_block_copy_0(struct __Persion__test2_block_impl_0*dst, struct __Persion__test2_block_impl_0*src) {_Block_object_assign((void*)&dst->self, (void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
 
 static void __Persion__test2_block_dispose_0(struct __Persion__test2_block_impl_0*src) {_Block_object_dispose((void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}

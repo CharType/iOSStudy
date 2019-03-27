@@ -2,13 +2,14 @@
 
 [toc]
 
-### block的本质：
+### block的底层结构：
 * block的本质是一个的OC对象，内部有一个isa指针，它封装了函数和调用函数所需要的参数，block中有一个变量捕获机制，正是因为这个变量捕获机制，block才能封装函数的调用环境。
 * block的底层结构图：
 ![](block的底层结构.png)
 
 ###block的变量捕获(capture)
 * 为了保证在block内部能够访问外部变量，block有个变量的捕获机制。block对局部变量和全局变量的访问方式是不同的
+* auto：
 ![](block的变量捕获机制介绍.png)
 * 在block中直接使用到成员变量为什么会捕获self?
 * 为什么局部auto变量和static变量的捕获机制不一样？
@@ -57,7 +58,7 @@
 
 ---
 
-### \_\_block
+### \_\_block的原理
 * \_\_block的本质
 	* \_\_block可以用来解决在block内部无法修改auto变量的问题，编译器会将__block修饰的变量封装成一个对象。
 	* \_\_block只能用来修饰auto变量，不能修饰static 和全局变量

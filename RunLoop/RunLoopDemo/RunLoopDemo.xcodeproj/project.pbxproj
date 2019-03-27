@@ -15,6 +15,8 @@
 		3BAF826B224551D3003E6DFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF826A224551D3003E6DFD /* main.m */; };
 		3BAF8275224551D3003E6DFD /* RunLoopDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF8274224551D3003E6DFD /* RunLoopDemoTests.m */; };
 		3BAF8280224551D3003E6DFD /* RunLoopDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF827F224551D3003E6DFD /* RunLoopDemoUITests.m */; };
+		3BD2E9AA224B14F800A7AB38 /* ZTHThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2E9A9224B14F800A7AB38 /* ZTHThread.m */; };
+		3BD2E9AD224B18EF00A7AB38 /* TWOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2E9AC224B18EF00A7AB38 /* TWOViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		3BAF827B224551D3003E6DFD /* RunLoopDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunLoopDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BAF827F224551D3003E6DFD /* RunLoopDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopDemoUITests.m; sourceTree = "<group>"; };
 		3BAF8281224551D3003E6DFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BD2E9A8224B14F800A7AB38 /* ZTHThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTHThread.h; sourceTree = "<group>"; };
+		3BD2E9A9224B14F800A7AB38 /* ZTHThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTHThread.m; sourceTree = "<group>"; };
+		3BD2E9AB224B18EF00A7AB38 /* TWOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWOViewController.h; sourceTree = "<group>"; };
+		3BD2E9AC224B18EF00A7AB38 /* TWOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWOViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +111,15 @@
 				3BAF825C224551D1003E6DFD /* AppDelegate.m */,
 				3BAF825E224551D1003E6DFD /* ViewController.h */,
 				3BAF825F224551D1003E6DFD /* ViewController.m */,
+				3BD2E9AB224B18EF00A7AB38 /* TWOViewController.h */,
+				3BD2E9AC224B18EF00A7AB38 /* TWOViewController.m */,
 				3BAF8261224551D1003E6DFD /* Main.storyboard */,
 				3BAF8264224551D3003E6DFD /* Assets.xcassets */,
 				3BAF8266224551D3003E6DFD /* LaunchScreen.storyboard */,
 				3BAF8269224551D3003E6DFD /* Info.plist */,
 				3BAF826A224551D3003E6DFD /* main.m */,
+				3BD2E9A8224B14F800A7AB38 /* ZTHThread.h */,
+				3BD2E9A9224B14F800A7AB38 /* ZTHThread.m */,
 			);
 			path = RunLoopDemo;
 			sourceTree = "<group>";
@@ -262,6 +272,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD2E9AD224B18EF00A7AB38 /* TWOViewController.m in Sources */,
+				3BD2E9AA224B14F800A7AB38 /* ZTHThread.m in Sources */,
 				3BAF8260224551D1003E6DFD /* ViewController.m in Sources */,
 				3BAF826B224551D3003E6DFD /* main.m in Sources */,
 				3BAF825D224551D1003E6DFD /* AppDelegate.m in Sources */,
