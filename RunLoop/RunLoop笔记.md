@@ -40,7 +40,7 @@
 * RunLoop启动时只能选择其中一个Mode作为currentMode
 * 如果要切换Mode,只能退出当前的Loop，再重新选择一个Mode进入
 	* 不同Mode的Source0/Source1/Timer/Observer能分隔开来，互不影响
-* 如果Mode里没有任何Source0/Source1/Timer/Observer,RunLoop会立马退出 (怎么才能测试一下)
+* 如果Mode里没有任何Source0/Source1/Timer/Observer,RunLoop会立马退出 (使用RunLoop进行线程保活的时候如果不在RunLoop中添加source0，Timer,Observer，现在会马上执行完毕，然后被系统回收)
 * 常见的2中Mode
 	* kCFRunLoopDefaultMode(NSDefaultRunLoopModel) :app默认的Model,通常主线程是在这个Model下运行
 	* UITrackingRunLoopMode:界面跟踪Model,用于ScrollView追踪触摸滑动，保证界面滑动的时候不受其他Model影响
@@ -72,6 +72,7 @@
 ![](RunLoop的执行逻辑图.png)
 
 ###RunLoop的线程保活
+* 查看Demo
 
 
 
