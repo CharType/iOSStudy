@@ -15,9 +15,21 @@
 
 @implementation ZTHViewController
 
+- (void) dealloc {
+    [self.threadObject stop];
+    NSLog(@"%s", __func__);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.threadObject = [[ZTHSerialThreadObject alloc] init];
+    [self.threadObject run];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.threadObject executeBlock:^{
+        NSLog(@"执行任务 线程 = %@", [NSThread currentThread]);
+    }];
 }
 
 
