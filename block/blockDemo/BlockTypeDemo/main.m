@@ -48,9 +48,9 @@ struct __main_block_impl_0 {
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-//        test1();
+        test1();
         test2();
-//        test3();
+        test3();
     }
     return 0;
 }
@@ -74,6 +74,7 @@ void test1(){
     
     NSObject *object = [[NSObject alloc] init];
     NSLog(@"%@",object);
+    // 0x1030069c0
     
     
     Class block1Class = object_getClass(block1);

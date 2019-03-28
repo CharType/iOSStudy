@@ -22,6 +22,7 @@ struct __block_impl {
     void *FuncPtr;
 };
 
+//声明 全局变量
 int a = 10;
 static int b = 20;
 

@@ -21,8 +21,8 @@ struct __block_impl {
 struct __main_block_impl_0 {
   struct __block_impl impl;
   struct __main_block_desc_0* Desc;
-  int a;
-  int *b;
+  int a;// auto类型局部变量
+  int *b;// static类型的局部变量
   __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int _a, int *_b, int flags=0) : a(_a), b(_b) {
     impl.isa = &_NSConcreteStackBlock;
     impl.Flags = flags;
