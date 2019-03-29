@@ -78,9 +78,17 @@ static void __main_block_func_1(struct __main_block_impl_1 *__cself) {
     NSLog((NSString *)&__NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_main_a59a2e_mi_2, c, strongObject, weakObject);
     NSLog((NSString *)&__NSConstantStringImpl__var_folders_kl_mghcpydn7wl8ch2z9jz19pg00000gn_T_main_a59a2e_mi_3,testBlock);
 }
-static void __main_block_copy_1(struct __main_block_impl_1*dst, struct __main_block_impl_1*src) {_Block_object_assign((void*)&dst->strongObject, (void*)src->strongObject, 3/*BLOCK_FIELD_IS_OBJECT*/);_Block_object_assign((void*)&dst->weakObject, (void*)src->weakObject, 3/*BLOCK_FIELD_IS_OBJECT*/);_Block_object_assign((void*)&dst->testBlock, (void*)src->testBlock, 7/*BLOCK_FIELD_IS_BLOCK*/);}
+static void __main_block_copy_1(struct __main_block_impl_1*dst, struct __main_block_impl_1*src) {
+    _Block_object_assign((void*)&dst->strongObject, (void*)src->strongObject, 3/*BLOCK_FIELD_IS_OBJECT*/);
+    _Block_object_assign((void*)&dst->weakObject, (void*)src->weakObject, 3/*BLOCK_FIELD_IS_OBJECT*/);
+    _Block_object_assign((void*)&dst->testBlock, (void*)src->testBlock, 7/*BLOCK_FIELD_IS_BLOCK*/);}
 
-static void __main_block_dispose_1(struct __main_block_impl_1*src) {_Block_object_dispose((void*)src->strongObject, 3/*BLOCK_FIELD_IS_OBJECT*/);_Block_object_dispose((void*)src->weakObject, 3/*BLOCK_FIELD_IS_OBJECT*/);_Block_object_dispose((void*)src->testBlock, 7/*BLOCK_FIELD_IS_BLOCK*/);}
+static void __main_block_dispose_1(struct __main_block_impl_1*src) {
+    _Block_object_dispose((void*)src->strongObject, 3/*BLOCK_FIELD_IS_OBJECT*/);
+    _Block_object_dispose((void*)src->weakObject, 3/*BLOCK_FIELD_IS_OBJECT*/);
+    _Block_object_dispose((void*)src->testBlock, 7/*BLOCK_FIELD_IS_BLOCK*/);
+    
+}
 
 static struct __main_block_desc_1 {
     size_t reserved;

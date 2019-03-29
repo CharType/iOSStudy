@@ -48,9 +48,15 @@ struct __main_block_impl_0 {
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        // block类型demo
         test1();
-        test2();
+        
+        // ARC下会自动进行copy的Demo
         test3();
+        
+        // block多次调用了copydemo
+        test2();
+        
     }
     return 0;
 }
@@ -194,6 +200,7 @@ void test2() {
     NSLog(@"block3 class %@", [block3 class]);
     NSLog(@"NSMallocBlock类型的block copy之后的类型是:");
     NSLog(@"block3 copy class %@", [[block3 copy] class]);
+    // block3 copy class __NSMallocBlock__
     
     
     MyBlock block4 = [block3 copy];
@@ -201,11 +208,17 @@ void test2() {
     MyBlock block6 = [block5 copy];
     MyBlock block7 = [block6 copy];
     NSLog(@"block2 %@",block2);
+    // block2 <__NSMallocBlock__: 0x10072da50>
     NSLog(@"block3 %@",block3);
+    // block3 <__NSMallocBlock__: 0x10072da50>
     NSLog(@"block4 %@",block4);
+    // block4 <__NSMallocBlock__: 0x10072da50>
     NSLog(@"block5 %@",block5);
+    // block5 <__NSMallocBlock__: 0x10072da50>
     NSLog(@"block6 %@",block6);
+    // block6 <__NSMallocBlock__: 0x10072da50>
     NSLog(@"block7 %@",block7);
+    // block7 <__NSMallocBlock__: 0x10072da50>
     
     
 //    NSLog(@"block3 retainCount %ld", [block3 retainCount]);
