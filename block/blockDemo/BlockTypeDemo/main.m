@@ -11,8 +11,8 @@
 
 int c = 100;
 static int d = 200;
-void test1(void);
-void test2(void);
+void blockTypeTest(void);
+void blockCopyTest(void);
 void test3(void);
 typedef void (^MyBlock)(void);
 
@@ -49,19 +49,19 @@ struct __main_block_impl_0 {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // block类型demo
-        test1();
+        blockTypeTest();
         
         // ARC下会自动进行copy的Demo
         test3();
         
         // block多次调用了copydemo
-        test2();
+        blockCopyTest();
         
     }
     return 0;
 }
 
-void test1(){
+void blockTypeTest(){
     int autoAge = 20;
     static int staticAge = 30;
     // 没有访问局部变量的block类型
@@ -170,7 +170,7 @@ void test3() {
     // __NSStackBlock__
 }
 
-void test2() {
+void blockCopyTest() {
 
     // 在MRC下
     // 没有访问局部变量的block类型

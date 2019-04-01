@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "MyPerson.h"
 typedef  void (^MyBlock)(void);
-void test1();
+void blockTypeTest();
 
 //MyBlock test() {
 //    int a = 10;
@@ -28,13 +28,13 @@ int main(int argc, const char * argv[]) {
 //
 //        block();
         
-        test1();
+        blockTypeTest();
     }
     return 0;
 }
 
-void test1() {
-    // 在ARC或者MRC下有什么不同，分别使用强引用或者弱引用有什么不同
+void blockTypeTest() {
+    // NSStackBlock 不会对捕获的变量强引用
     MyBlock block;
     {
         MyPerson *person = [[MyPerson alloc] init];

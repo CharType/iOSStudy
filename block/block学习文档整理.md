@@ -67,11 +67,11 @@
 ![](__block的forwarding指针.png)
 * block对__block变量的内存管理
 	* block对__block变量的内存管理
-	* 当block栈上的时候并不会对__block变量产生强引用。 当block被copy到堆上的时候会调用block内部的copy函数，copy函数会调用_Block_object_assign函数，_Block_object_assign函数会对__block变量强引用。
-	* 当block从堆中移除的时候，会调用block的dispose函数，dispose函数会调用_Block_object_dispose函数,_Block_object_dispose函数会对__block变量做一次release 
+	* 当block栈上的时候并不会对__block变量产生强引用。 当block被copy到堆上的时候会调用block内部的copy函数，copy函数会调用\_Block\_object\_assign函数，\_Block\_object\_assign函数会对\_\_block变量强引用。
+	* 当block从堆中移除的时候，会调用block的dispose函数，dispose函数会调用_Block_object_dispose函数,\_\_Block\_object\_dispose函数会对\_\_block变量做一次release 
 * \_\_block变量对修饰的对象类型的内存管理
 	* \_\_block变量在栈上的时候不会对\_\_block内部的变量产生强引用
-	* 当\_\_block变量被copy到堆上的时候 会调用\_\_block变量内部的copy方法。 copy方法会调用 \_Block_object_assign 函数，\_Block_object_assign函数会根据所指向对象的修饰符决定是强指针还是弱指针（仅仅是ARC环境下，在MRC环境下一定不会retain）
+	* 当\_\_block变量被copy到堆上的时候 会调用\_\_block变量内部的copy方法。 copy方法会调用 \_\_Block\_object\_assign 函数，\_Block\_object\_assign函数会根据所指向对象的修饰符决定是强指针还是弱指针（仅仅是ARC环境下，在MRC环境下一定不会retain）
 	* 当\_\_block变量从堆上移除的时候会调用\_\_block变量内部的dospose函数， dispose函数会调用\_Block_object_dispose，\_Block_object_dispose会对指向的对象做一次release
 
 ---
