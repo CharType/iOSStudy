@@ -3,7 +3,7 @@
 [toc]
 
 ### block的底层结构：
-* block的本质是一个的OC对象，内部有一个isa指针，它封装了函数和调用函数所需要的参数，block中有一个变量捕获机制，正是因为这个变量捕获机制，block才能封装函数的调用环境。
+* block定义：block的本质是一个的OC对象，内部有一个isa指针，它封装了函数和调用函数所需要的参数，block中有一个变量捕获机制，正是因为这个变量捕获机制，block才能封装函数的调用环境。
 * block的底层结构图：
 ![](block的底层结构.png)
 
@@ -11,8 +11,7 @@
 * 为了保证在block内部能够访问外部变量，block有个变量的捕获机制。block对局部变量和全局变量的访问方式是不同的
 * auto：当前变量的作用域为当前函数或代码块内，当前变量时一个局部变量，当前变量会在栈区上进行分配存储空间。
 ![](block的变量捕获机制介绍.png)
-* 在block中直接使用到成员变量为什么会捕获self?
-* 为什么局部auto变量和static变量的捕获机制不一样？
+* 在block中直接使用到成员变量也会捕获self。
 
 ###block的类型
 * 可以通过调用class方法或者isa指针查看block的具体类型，最终都是继承NSBlock类型
@@ -74,6 +73,7 @@
 	* 当\_\_block变量被copy到堆上的时候 会调用\_\_block变量内部的copy方法。 copy方法会调用 \_\_Block\_object\_assign 函数，\_Block\_object\_assign函数会根据所指向对象的修饰符决定是强指针还是弱指针（仅仅是ARC环境下，在MRC环境下一定不会retain）
 	* 当\_\_block变量从堆上移除的时候会调用\_\_block变量内部的dospose函数， dispose函数会调用\_Block_object_dispose，\_Block_object_dispose会对指向的对象做一次release
 
+![](block从栈上拷贝到堆上.png)
 ---
 
 ### block的循环引用

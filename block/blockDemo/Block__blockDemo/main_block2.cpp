@@ -19,6 +19,7 @@ struct __block_impl {
 };
 
 static void __Block_byref_id_object_copy_131(void *dst, void *src) {
+    // +40
     _Block_object_assign((char*)dst + 40, *(void * *) ((char*)src + 40), 131);
 }
 static void __Block_byref_id_object_dispose_131(void *src) {

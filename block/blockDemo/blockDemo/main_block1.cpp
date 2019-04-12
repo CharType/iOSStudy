@@ -1,6 +1,6 @@
 #pragma clang assume_nonnull end
 
-//        最简单的bblock
+//        最简单的block
 //        void (^block)(void) = ^{
 //            NSLog(@"Hello, World!");
 //        };
