@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B1F5827226CCC8A0018B4B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F5826226CCC8A0018B4B2 /* AppDelegate.m */; };
-		3B1F582A226CCC8A0018B4B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F5829226CCC8A0018B4B2 /* ViewController.m */; };
-		3B1F582D226CCC8A0018B4B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1F582B226CCC8A0018B4B2 /* Main.storyboard */; };
-		3B1F582F226CCC8A0018B4B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B1F582E226CCC8A0018B4B2 /* Assets.xcassets */; };
-		3B1F5832226CCC8A0018B4B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1F5830226CCC8A0018B4B2 /* LaunchScreen.storyboard */; };
-		3B1F5835226CCC8A0018B4B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F5834226CCC8A0018B4B2 /* main.m */; };
+		3B12A2D0226D96450004521A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B12A2CF226D96450004521A /* AppDelegate.m */; };
+		3B12A2D3226D96450004521A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B12A2D2226D96450004521A /* ViewController.m */; };
+		3B12A2D6226D96450004521A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B12A2D4226D96450004521A /* Main.storyboard */; };
+		3B12A2D8226D96460004521A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B12A2D7226D96460004521A /* Assets.xcassets */; };
+		3B12A2DB226D96460004521A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B12A2D9226D96460004521A /* LaunchScreen.storyboard */; };
+		3B12A2DE226D96460004521A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B12A2DD226D96460004521A /* main.m */; };
 		3B93E932224E6C7F008017FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B93E931224E6C7F008017FF /* AppDelegate.m */; };
 		3B93E935224E6C7F008017FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B93E934224E6C7F008017FF /* ViewController.m */; };
 		3B93E938224E6C7F008017FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B93E936224E6C7F008017FF /* Main.storyboard */; };
@@ -22,29 +22,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B1F57EF226CCC600018B4B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3B1F57F0226CCC600018B4B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3B1F57F2226CCC600018B4B2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3B1F57F3226CCC600018B4B2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3B1F57F6226CCC600018B4B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3B1F57F8226CCC620018B4B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3B1F57FB226CCC620018B4B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3B1F57FD226CCC620018B4B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B1F57FE226CCC620018B4B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3B1F5808226CCC620018B4B2 /* ___DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___DemoTests.m"; sourceTree = "<group>"; };
-		3B1F580A226CCC620018B4B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B1F5813226CCC620018B4B2 /* ___DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___DemoUITests.m"; sourceTree = "<group>"; };
-		3B1F5815226CCC620018B4B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B1F5823226CCC8A0018B4B2 /* 多线程Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "多线程Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B1F5825226CCC8A0018B4B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3B1F5826226CCC8A0018B4B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3B1F5828226CCC8A0018B4B2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3B1F5829226CCC8A0018B4B2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3B1F582C226CCC8A0018B4B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3B1F582E226CCC8A0018B4B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3B1F5831226CCC8A0018B4B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3B1F5833226CCC8A0018B4B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B1F5834226CCC8A0018B4B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B12A2CC226D96450004521A /* OsUnfairLockDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OsUnfairLockDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B12A2CE226D96450004521A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3B12A2CF226D96450004521A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3B12A2D1226D96450004521A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3B12A2D2226D96450004521A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3B12A2D5226D96450004521A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B12A2D7226D96460004521A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B12A2DA226D96460004521A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B12A2DC226D96460004521A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B12A2DD226D96460004521A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3B93E92D224E6C7F008017FF /* GCDDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCDDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B93E930224E6C7F008017FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B93E931224E6C7F008017FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -55,14 +42,10 @@
 		3B93E93C224E6C7F008017FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B93E93E224E6C7F008017FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B93E93F224E6C7F008017FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3B93E949224E6C80008017FF /* GCDDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDDemoTests.m; sourceTree = "<group>"; };
-		3B93E94B224E6C80008017FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B93E954224E6C80008017FF /* GCDDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDDemoUITests.m; sourceTree = "<group>"; };
-		3B93E956224E6C80008017FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3B1F5820226CCC8A0018B4B2 /* Frameworks */ = {
+		3B12A2C9226D96450004521A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,66 +62,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B1F57EE226CCC600018B4B2 /* 多线程Demo */ = {
+		3B12A2CD226D96450004521A /* OsUnfairLockDemo */ = {
 			isa = PBXGroup;
 			children = (
-				3B1F57EF226CCC600018B4B2 /* AppDelegate.h */,
-				3B1F57F0226CCC600018B4B2 /* AppDelegate.m */,
-				3B1F57F2226CCC600018B4B2 /* ViewController.h */,
-				3B1F57F3226CCC600018B4B2 /* ViewController.m */,
-				3B1F57F5226CCC600018B4B2 /* Main.storyboard */,
-				3B1F57F8226CCC620018B4B2 /* Assets.xcassets */,
-				3B1F57FA226CCC620018B4B2 /* LaunchScreen.storyboard */,
-				3B1F57FD226CCC620018B4B2 /* Info.plist */,
-				3B1F57FE226CCC620018B4B2 /* main.m */,
+				3B12A2CE226D96450004521A /* AppDelegate.h */,
+				3B12A2CF226D96450004521A /* AppDelegate.m */,
+				3B12A2D1226D96450004521A /* ViewController.h */,
+				3B12A2D2226D96450004521A /* ViewController.m */,
+				3B12A2D4226D96450004521A /* Main.storyboard */,
+				3B12A2D7226D96460004521A /* Assets.xcassets */,
+				3B12A2D9226D96460004521A /* LaunchScreen.storyboard */,
+				3B12A2DC226D96460004521A /* Info.plist */,
+				3B12A2DD226D96460004521A /* main.m */,
 			);
-			path = "多线程Demo";
-			sourceTree = "<group>";
-		};
-		3B1F5807226CCC620018B4B2 /* 多线程DemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				3B1F5808226CCC620018B4B2 /* ___DemoTests.m */,
-				3B1F580A226CCC620018B4B2 /* Info.plist */,
-			);
-			path = "多线程DemoTests";
-			sourceTree = "<group>";
-		};
-		3B1F5812226CCC620018B4B2 /* 多线程DemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3B1F5813226CCC620018B4B2 /* ___DemoUITests.m */,
-				3B1F5815226CCC620018B4B2 /* Info.plist */,
-			);
-			path = "多线程DemoUITests";
-			sourceTree = "<group>";
-		};
-		3B1F5824226CCC8A0018B4B2 /* 多线程Demo */ = {
-			isa = PBXGroup;
-			children = (
-				3B1F5825226CCC8A0018B4B2 /* AppDelegate.h */,
-				3B1F5826226CCC8A0018B4B2 /* AppDelegate.m */,
-				3B1F5828226CCC8A0018B4B2 /* ViewController.h */,
-				3B1F5829226CCC8A0018B4B2 /* ViewController.m */,
-				3B1F582B226CCC8A0018B4B2 /* Main.storyboard */,
-				3B1F582E226CCC8A0018B4B2 /* Assets.xcassets */,
-				3B1F5830226CCC8A0018B4B2 /* LaunchScreen.storyboard */,
-				3B1F5833226CCC8A0018B4B2 /* Info.plist */,
-				3B1F5834226CCC8A0018B4B2 /* main.m */,
-			);
-			path = "多线程Demo";
+			path = OsUnfairLockDemo;
 			sourceTree = "<group>";
 		};
 		3B93E924224E6C7F008017FF = {
 			isa = PBXGroup;
 			children = (
 				3B93E92F224E6C7F008017FF /* GCDDemo */,
-				3B93E948224E6C80008017FF /* GCDDemoTests */,
-				3B93E953224E6C80008017FF /* GCDDemoUITests */,
-				3B1F57EE226CCC600018B4B2 /* 多线程Demo */,
-				3B1F5807226CCC620018B4B2 /* 多线程DemoTests */,
-				3B1F5812226CCC620018B4B2 /* 多线程DemoUITests */,
-				3B1F5824226CCC8A0018B4B2 /* 多线程Demo */,
+				3B12A2CD226D96450004521A /* OsUnfairLockDemo */,
 				3B93E92E224E6C7F008017FF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -147,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				3B93E92D224E6C7F008017FF /* GCDDemo.app */,
-				3B1F5823226CCC8A0018B4B2 /* 多线程Demo.app */,
+				3B12A2CC226D96450004521A /* OsUnfairLockDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,42 +112,24 @@
 			path = GCDDemo;
 			sourceTree = "<group>";
 		};
-		3B93E948224E6C80008017FF /* GCDDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				3B93E949224E6C80008017FF /* GCDDemoTests.m */,
-				3B93E94B224E6C80008017FF /* Info.plist */,
-			);
-			path = GCDDemoTests;
-			sourceTree = "<group>";
-		};
-		3B93E953224E6C80008017FF /* GCDDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3B93E954224E6C80008017FF /* GCDDemoUITests.m */,
-				3B93E956224E6C80008017FF /* Info.plist */,
-			);
-			path = GCDDemoUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3B1F5822226CCC8A0018B4B2 /* 多线程Demo */ = {
+		3B12A2CB226D96450004521A /* OsUnfairLockDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B1F5836226CCC8A0018B4B2 /* Build configuration list for PBXNativeTarget "多线程Demo" */;
+			buildConfigurationList = 3B12A2DF226D96460004521A /* Build configuration list for PBXNativeTarget "OsUnfairLockDemo" */;
 			buildPhases = (
-				3B1F581F226CCC8A0018B4B2 /* Sources */,
-				3B1F5820226CCC8A0018B4B2 /* Frameworks */,
-				3B1F5821226CCC8A0018B4B2 /* Resources */,
+				3B12A2C8226D96450004521A /* Sources */,
+				3B12A2C9226D96450004521A /* Frameworks */,
+				3B12A2CA226D96450004521A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "多线程Demo";
-			productName = "多线程Demo";
-			productReference = 3B1F5823226CCC8A0018B4B2 /* 多线程Demo.app */;
+			name = OsUnfairLockDemo;
+			productName = OsUnfairLockDemo;
+			productReference = 3B12A2CC226D96450004521A /* OsUnfairLockDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3B93E92C224E6C7F008017FF /* GCDDemo */ = {
@@ -232,7 +158,7 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = CharType;
 				TargetAttributes = {
-					3B1F5822226CCC8A0018B4B2 = {
+					3B12A2CB226D96450004521A = {
 						CreatedOnToolsVersion = 10.1;
 					};
 					3B93E92C224E6C7F008017FF = {
@@ -254,19 +180,19 @@
 			projectRoot = "";
 			targets = (
 				3B93E92C224E6C7F008017FF /* GCDDemo */,
-				3B1F5822226CCC8A0018B4B2 /* 多线程Demo */,
+				3B12A2CB226D96450004521A /* OsUnfairLockDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3B1F5821226CCC8A0018B4B2 /* Resources */ = {
+		3B12A2CA226D96450004521A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B1F5832226CCC8A0018B4B2 /* LaunchScreen.storyboard in Resources */,
-				3B1F582F226CCC8A0018B4B2 /* Assets.xcassets in Resources */,
-				3B1F582D226CCC8A0018B4B2 /* Main.storyboard in Resources */,
+				3B12A2DB226D96460004521A /* LaunchScreen.storyboard in Resources */,
+				3B12A2D8226D96460004521A /* Assets.xcassets in Resources */,
+				3B12A2D6226D96450004521A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,13 +209,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3B1F581F226CCC8A0018B4B2 /* Sources */ = {
+		3B12A2C8226D96450004521A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B1F582A226CCC8A0018B4B2 /* ViewController.m in Sources */,
-				3B1F5835226CCC8A0018B4B2 /* main.m in Sources */,
-				3B1F5827226CCC8A0018B4B2 /* AppDelegate.m in Sources */,
+				3B12A2D3226D96450004521A /* ViewController.m in Sources */,
+				3B12A2DE226D96460004521A /* main.m in Sources */,
+				3B12A2D0226D96450004521A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,34 +232,18 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3B1F57F5226CCC600018B4B2 /* Main.storyboard */ = {
+		3B12A2D4226D96450004521A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3B1F57F6226CCC600018B4B2 /* Base */,
+				3B12A2D5226D96450004521A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		3B1F57FA226CCC620018B4B2 /* LaunchScreen.storyboard */ = {
+		3B12A2D9226D96460004521A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3B1F57FB226CCC620018B4B2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		3B1F582B226CCC8A0018B4B2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B1F582C226CCC8A0018B4B2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3B1F5830226CCC8A0018B4B2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B1F5831226CCC8A0018B4B2 /* Base */,
+				3B12A2DA226D96460004521A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -357,33 +267,33 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3B1F5837226CCC8A0018B4B2 /* Debug */ = {
+		3B12A2E0226D96460004521A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "多线程Demo/Info.plist";
+				INFOPLIST_FILE = OsUnfairLockDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ashaj.www.---Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.www.OsUnfairLockDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		3B1F5838226CCC8A0018B4B2 /* Release */ = {
+		3B12A2E1226D96460004521A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "多线程Demo/Info.plist";
+				INFOPLIST_FILE = OsUnfairLockDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ashaj.www.---Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.www.OsUnfairLockDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -536,11 +446,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3B1F5836226CCC8A0018B4B2 /* Build configuration list for PBXNativeTarget "多线程Demo" */ = {
+		3B12A2DF226D96460004521A /* Build configuration list for PBXNativeTarget "OsUnfairLockDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B1F5837226CCC8A0018B4B2 /* Debug */,
-				3B1F5838226CCC8A0018B4B2 /* Release */,
+				3B12A2E0226D96460004521A /* Debug */,
+				3B12A2E1226D96460004521A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
