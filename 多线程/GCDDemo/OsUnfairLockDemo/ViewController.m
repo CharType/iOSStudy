@@ -10,6 +10,7 @@
 #import <os/lock.h>
 
 @interface ViewController ()
+@property (nonatomic, assign) os_unfair_lock lock;
 @property (nonatomic, assign) NSInteger tickerCount;
 @end
 
@@ -19,19 +20,19 @@
     [super viewDidLoad];
     self.tickerCount = 15;
     dispatch_queue_t queue =  dispatch_get_global_queue(0, 0);
-    for (int i = 0; i < self.tickerCount; i++) {
+    for (int i = 0; i < 5; i++) {
         dispatch_async(queue, ^{
             [self ticketTest];
         });
     }
     
-    for (int i = 0; i < self.tickerCount; i++) {
+    for (int i = 0; i < 5; i++) {
         dispatch_async(queue, ^{
             [self ticketTest];
         });
     }
     
-    for (int i = 0; i < self.tickerCount; i++) {
+    for (int i = 0; i < 5; i++) {
         dispatch_async(queue, ^{
             [self ticketTest];
         });
@@ -39,9 +40,23 @@
 }
 
 - (void)ticketTest {
+    os_unfair_lock_lock(&_lock);
     self.tickerCount--;
     NSLog(@"卖出一张票，还剩%ld张票",  self.tickerCount);
+    os_unfair_lock_unlock(&_lock);
 }
+
+- (void)ticketTest1 {
+    if (os_unfair_lock_trylock(&_lock)) {
+        self.tickerCount--;
+        NSLog(@"卖出一张票，还剩%ld张票",  self.tickerCount);
+        os_unfair_lock_unlock(&_lock);
+    }
+}
+
+
+
+
 
 
 @end
