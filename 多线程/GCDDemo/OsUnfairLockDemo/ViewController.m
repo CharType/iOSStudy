@@ -10,7 +10,7 @@
 #import <os/lock.h>
 
 @interface ViewController ()
-@property (nonatomic, assign) os_unfair_lock lock;
+@property (nonatomic, assign) os_unfair_lock defaultLock;
 @property (nonatomic, assign) NSInteger tickerCount;
 @end
 
@@ -40,17 +40,17 @@
 }
 
 - (void)ticketTest {
-    os_unfair_lock_lock(&_lock);
+    os_unfair_lock_lock(&_defaultLock);
     self.tickerCount--;
     NSLog(@"卖出一张票，还剩%ld张票",  self.tickerCount);
-    os_unfair_lock_unlock(&_lock);
+    os_unfair_lock_unlock(&_defaultLock);
 }
 
 - (void)ticketTest1 {
-    if (os_unfair_lock_trylock(&_lock)) {
+    if (os_unfair_lock_trylock(&_defaultLock)) {
         self.tickerCount--;
         NSLog(@"卖出一张票，还剩%ld张票",  self.tickerCount);
-        os_unfair_lock_unlock(&_lock);
+        os_unfair_lock_unlock(&_defaultLock);
     }
 }
 

@@ -25,25 +25,26 @@
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
     for (int i = 0; i < 5; i++) {
         dispatch_async(queue, ^{
-            [self ticketTest3];
+            [self ticketTest];
         });
     }
     
     for (int i = 0; i < 5; i++) {
         dispatch_async(queue, ^{
-            [self ticketTest3];
+            [self ticketTest];
         });
     }
     
     for (int i = 0; i < 5; i++) {
         dispatch_async(queue, ^{
-            [self ticketTest3];
+            [self ticketTest];
         });
     }
 }
 
 - (void)ticketTest {
     OSSpinLockLock(&_lock);
+    [NSThread sleepForTimeInterval:600];
     self.ticketCount--;
     NSLog(@"卖出一张票，还剩%ld张票",  self.ticketCount);
     OSSpinLockUnlock(&_lock);
