@@ -16,13 +16,21 @@
 // 递归锁
 @property (nonatomic, assign) pthread_mutex_t recursiveLock;
 
+// 条件
+@property (nonatomic, assign) pthread_cond_t cond;
+// 条件锁
+@property (nonatomic, assign) pthread_mutex_t condLock;
+
 @property (nonatomic, assign) dispatch_queue_t queue;
+
+
 @end
 
 @implementation ViewController
 
 - (void)dealloc {
     pthread_mutex_destroy(&_defaultLock);
+    pthread_mutex_destroy(&_recursiveLock);
 }
 
 - (void)initRecursiveMutexLock:(pthread_mutex_t *)lock {

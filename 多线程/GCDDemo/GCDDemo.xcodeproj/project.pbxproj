@@ -19,6 +19,18 @@
 		3B12A2F4226D99410004521A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B12A2F3226D99410004521A /* Assets.xcassets */; };
 		3B12A2F7226D99410004521A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B12A2F5226D99410004521A /* LaunchScreen.storyboard */; };
 		3B12A2FA226D99410004521A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B12A2F9226D99410004521A /* main.m */; };
+		3B35F9992272151000D2535E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B35F9982272151000D2535E /* AppDelegate.m */; };
+		3B35F99C2272151000D2535E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B35F99B2272151000D2535E /* ViewController.m */; };
+		3B35F99F2272151000D2535E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B35F99D2272151000D2535E /* Main.storyboard */; };
+		3B35F9A12272151100D2535E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B35F9A02272151100D2535E /* Assets.xcassets */; };
+		3B35F9A42272151100D2535E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B35F9A22272151100D2535E /* LaunchScreen.storyboard */; };
+		3B35F9A72272151100D2535E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B35F9A62272151100D2535E /* main.m */; };
+		3B35F9B322721C0100D2535E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B35F9B222721C0100D2535E /* AppDelegate.m */; };
+		3B35F9B622721C0100D2535E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B35F9B522721C0100D2535E /* ViewController.m */; };
+		3B35F9B922721C0100D2535E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B35F9B722721C0100D2535E /* Main.storyboard */; };
+		3B35F9BB22721C0100D2535E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B35F9BA22721C0100D2535E /* Assets.xcassets */; };
+		3B35F9BE22721C0100D2535E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B35F9BC22721C0100D2535E /* LaunchScreen.storyboard */; };
+		3B35F9C122721C0100D2535E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B35F9C022721C0100D2535E /* main.m */; };
 		3B93E932224E6C7F008017FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B93E931224E6C7F008017FF /* AppDelegate.m */; };
 		3B93E935224E6C7F008017FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B93E934224E6C7F008017FF /* ViewController.m */; };
 		3B93E938224E6C7F008017FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B93E936224E6C7F008017FF /* Main.storyboard */; };
@@ -60,6 +72,26 @@
 		3B12A2F6226D99410004521A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B12A2F8226D99410004521A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B12A2F9226D99410004521A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B35F9952272151000D2535E /* NSLockDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSLockDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B35F9972272151000D2535E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3B35F9982272151000D2535E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3B35F99A2272151000D2535E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3B35F99B2272151000D2535E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3B35F99E2272151000D2535E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B35F9A02272151100D2535E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B35F9A32272151100D2535E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B35F9A52272151100D2535E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B35F9A62272151100D2535E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B35F9AF22721C0000D2535E /* serialQueueDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = serialQueueDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B35F9B122721C0100D2535E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3B35F9B222721C0100D2535E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3B35F9B422721C0100D2535E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3B35F9B522721C0100D2535E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3B35F9B822721C0100D2535E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B35F9BA22721C0100D2535E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B35F9BD22721C0100D2535E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B35F9BF22721C0100D2535E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B35F9C022721C0100D2535E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3B93E92D224E6C7F008017FF /* GCDDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCDDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B93E930224E6C7F008017FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B93E931224E6C7F008017FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,6 +133,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3B12A2E5226D99410004521A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B35F9922272151000D2535E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B35F9AC22721C0000D2535E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -163,6 +209,38 @@
 			path = OSSPinLockDemo;
 			sourceTree = "<group>";
 		};
+		3B35F9962272151000D2535E /* NSLockDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3B35F9972272151000D2535E /* AppDelegate.h */,
+				3B35F9982272151000D2535E /* AppDelegate.m */,
+				3B35F99A2272151000D2535E /* ViewController.h */,
+				3B35F99B2272151000D2535E /* ViewController.m */,
+				3B35F99D2272151000D2535E /* Main.storyboard */,
+				3B35F9A02272151100D2535E /* Assets.xcassets */,
+				3B35F9A22272151100D2535E /* LaunchScreen.storyboard */,
+				3B35F9A52272151100D2535E /* Info.plist */,
+				3B35F9A62272151100D2535E /* main.m */,
+			);
+			path = NSLockDemo;
+			sourceTree = "<group>";
+		};
+		3B35F9B022721C0100D2535E /* serialQueueDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3B35F9B122721C0100D2535E /* AppDelegate.h */,
+				3B35F9B222721C0100D2535E /* AppDelegate.m */,
+				3B35F9B422721C0100D2535E /* ViewController.h */,
+				3B35F9B522721C0100D2535E /* ViewController.m */,
+				3B35F9B722721C0100D2535E /* Main.storyboard */,
+				3B35F9BA22721C0100D2535E /* Assets.xcassets */,
+				3B35F9BC22721C0100D2535E /* LaunchScreen.storyboard */,
+				3B35F9BF22721C0100D2535E /* Info.plist */,
+				3B35F9C022721C0100D2535E /* main.m */,
+			);
+			path = serialQueueDemo;
+			sourceTree = "<group>";
+		};
 		3B93E924224E6C7F008017FF = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +249,8 @@
 				3B12A2E9226D99410004521A /* OSSPinLockDemo */,
 				3BB27145226E92DB0028371E /* pthreadMutexDemo */,
 				3BB2715F226FFF320028371E /* pthreadMutexCondition */,
+				3B35F9962272151000D2535E /* NSLockDemo */,
+				3B35F9B022721C0100D2535E /* serialQueueDemo */,
 				3B93E92E224E6C7F008017FF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -183,6 +263,8 @@
 				3B12A2E8226D99410004521A /* OSSPinLockDemo.app */,
 				3BB27144226E92DB0028371E /* pthreadMutexDemo.app */,
 				3BB2715E226FFF320028371E /* pthreadMutexCondition.app */,
+				3B35F9952272151000D2535E /* NSLockDemo.app */,
+				3B35F9AF22721C0000D2535E /* serialQueueDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -272,6 +354,40 @@
 			productReference = 3B12A2E8226D99410004521A /* OSSPinLockDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3B35F9942272151000D2535E /* NSLockDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B35F9AA2272151100D2535E /* Build configuration list for PBXNativeTarget "NSLockDemo" */;
+			buildPhases = (
+				3B35F9912272151000D2535E /* Sources */,
+				3B35F9922272151000D2535E /* Frameworks */,
+				3B35F9932272151000D2535E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSLockDemo;
+			productName = NSLockDemo;
+			productReference = 3B35F9952272151000D2535E /* NSLockDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B35F9AE22721C0000D2535E /* serialQueueDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B35F9C222721C0100D2535E /* Build configuration list for PBXNativeTarget "serialQueueDemo" */;
+			buildPhases = (
+				3B35F9AB22721C0000D2535E /* Sources */,
+				3B35F9AC22721C0000D2535E /* Frameworks */,
+				3B35F9AD22721C0000D2535E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = serialQueueDemo;
+			productName = serialQueueDemo;
+			productReference = 3B35F9AF22721C0000D2535E /* serialQueueDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		3B93E92C224E6C7F008017FF /* GCDDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B93E959224E6C80008017FF /* Build configuration list for PBXNativeTarget "GCDDemo" */;
@@ -338,6 +454,12 @@
 					3B12A2E7226D99410004521A = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					3B35F9942272151000D2535E = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					3B35F9AE22721C0000D2535E = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					3B93E92C224E6C7F008017FF = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -367,6 +489,8 @@
 				3B12A2E7226D99410004521A /* OSSPinLockDemo */,
 				3BB27143226E92DB0028371E /* pthreadMutexDemo */,
 				3BB2715D226FFF320028371E /* pthreadMutexCondition */,
+				3B35F9942272151000D2535E /* NSLockDemo */,
+				3B35F9AE22721C0000D2535E /* serialQueueDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -389,6 +513,26 @@
 				3B12A2F7226D99410004521A /* LaunchScreen.storyboard in Resources */,
 				3B12A2F4226D99410004521A /* Assets.xcassets in Resources */,
 				3B12A2F2226D99410004521A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B35F9932272151000D2535E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B35F9A42272151100D2535E /* LaunchScreen.storyboard in Resources */,
+				3B35F9A12272151100D2535E /* Assets.xcassets in Resources */,
+				3B35F99F2272151000D2535E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B35F9AD22721C0000D2535E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B35F9BE22721C0100D2535E /* LaunchScreen.storyboard in Resources */,
+				3B35F9BB22721C0100D2535E /* Assets.xcassets in Resources */,
+				3B35F9B922721C0100D2535E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +586,26 @@
 				3B12A2EF226D99410004521A /* ViewController.m in Sources */,
 				3B12A2FA226D99410004521A /* main.m in Sources */,
 				3B12A2EC226D99410004521A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B35F9912272151000D2535E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B35F99C2272151000D2535E /* ViewController.m in Sources */,
+				3B35F9A72272151100D2535E /* main.m in Sources */,
+				3B35F9992272151000D2535E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B35F9AB22721C0000D2535E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B35F9B622721C0100D2535E /* ViewController.m in Sources */,
+				3B35F9C122721C0100D2535E /* main.m in Sources */,
+				3B35F9B322721C0100D2535E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +670,38 @@
 			isa = PBXVariantGroup;
 			children = (
 				3B12A2F6226D99410004521A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3B35F99D2272151000D2535E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B35F99E2272151000D2535E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3B35F9A22272151100D2535E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B35F9A32272151100D2535E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3B35F9B722721C0100D2535E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B35F9B822721C0100D2535E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3B35F9BC22721C0100D2535E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B35F9BD22721C0100D2535E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -620,6 +816,70 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.www.OSSPinLockDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3B35F9A82272151100D2535E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NSLockDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.www.NSLockDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B35F9A92272151100D2535E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NSLockDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.www.NSLockDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3B35F9C322721C0100D2535E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = serialQueueDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.www.serialQueueDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B35F9C422721C0100D2535E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = serialQueueDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.www.serialQueueDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -850,6 +1110,24 @@
 			buildConfigurations = (
 				3B12A2FC226D99410004521A /* Debug */,
 				3B12A2FD226D99410004521A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B35F9AA2272151100D2535E /* Build configuration list for PBXNativeTarget "NSLockDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B35F9A82272151100D2535E /* Debug */,
+				3B35F9A92272151100D2535E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B35F9C222721C0100D2535E /* Build configuration list for PBXNativeTarget "serialQueueDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B35F9C322721C0100D2535E /* Debug */,
+				3B35F9C422721C0100D2535E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
