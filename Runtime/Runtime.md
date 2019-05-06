@@ -33,7 +33,7 @@
    * 如果为1，那么引用计数器会存储在一个叫siddeTable的类的属性中
 
 ### class的结构
-![](class的结构@2x.png)   
+![](class的结构@2x.png) 
 
 ### class_rw_t
 * class_rw_t里面的 methods,properties,protocols 是二维数组，是可读可写的，包含了类的初始内容和分类内容。
@@ -64,7 +64,7 @@
 
  ![](cache_t@2x.png)
 ### objc_msgSend执行流程
-
+* OC中的方法调用，其实都是转换为objc_msgSend调用。
 * objc_msgSend执行流程可以分为3大阶段
 	1. 消息发送
 	2. 动态方法解析
