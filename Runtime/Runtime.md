@@ -59,4 +59,14 @@
 ![](TypeEncoding@2x.png)
 ### 方法缓存
 * class内部结构中有个方法缓存(cahce_t),用散列表（哈希表）来缓存已经调用过的方法，可以提高方法的查找速度
- 
+* 源码文件名:objc-cache.mm
+* bucket_t * cache_t::find(cache\_key\_t k, id receiver)
+
+ ![](cache_t@2x.png)
+### objc_msgSend执行流程
+
+* objc_msgSend执行流程可以分为3大阶段
+	1. 消息发送
+	2. 动态方法解析
+	3. 消息转发 
+![](iOS消息发送流程.jpg)

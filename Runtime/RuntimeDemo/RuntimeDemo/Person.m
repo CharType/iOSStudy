@@ -19,7 +19,7 @@
 + (void)otherClassTest {
     NSLog(@"%s", __func__);
 }
-
+// 开始动态方法解析
 //+ (BOOL)resolveInstanceMethod:(SEL)sel {
 //
 //    if (sel == @selector(test)) {
@@ -43,11 +43,28 @@
 //    return [super resolveClassMethod:sel];
 //}
 
-- (id)forwardingTargetForSelector:(SEL)aSelector {
-    return [[Sturent alloc] init];
+// 方法转发
+//- (id)forwardingTargetForSelector:(SEL)aSelector {
+//    return [[Sturent alloc] init];
+//}
+//
+//+ (id)forwardingTargetForSelector:(SEL)aSelector {
+//    return [[Sturent alloc] init];
+//}
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    return [[[NSObject alloc] init] methodSignatureForSelector:@selector(class)];
 }
 
-+ (id)forwardingTargetForSelector:(SEL)aSelector {
-    return [[Sturent alloc] init];
++ (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    return [[[NSObject alloc] init] methodSignatureForSelector:@selector(class)];
 }
+
+//- (void)forwardInvocation:(NSInvocation *)anInvocation {
+//
+//}
+//
+//+ (void)forwardInvocation:(NSInvocation *)anInvocation {
+//    
+//}
 @end
