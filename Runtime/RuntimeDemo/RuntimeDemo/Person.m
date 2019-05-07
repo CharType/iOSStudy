@@ -60,11 +60,11 @@
     return [[[NSObject alloc] init] methodSignatureForSelector:@selector(class)];
 }
 
-//- (void)forwardInvocation:(NSInvocation *)anInvocation {
-//
-//}
-//
-//+ (void)forwardInvocation:(NSInvocation *)anInvocation {
-//    
-//}
+- (void)forwardInvocation:(NSInvocation *)anInvocation {
+
+}
+
++ (void)forwardInvocation:(NSInvocation *)anInvocation {
+    
+}
 @end
