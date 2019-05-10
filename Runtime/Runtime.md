@@ -70,3 +70,5 @@
 	2. 动态方法解析
 	3. 消息转发 
 ![](iOS消息发送流程.jpg)
+
+### isKindOfClass 和 isMemberOfClass (对象方法和类方法)

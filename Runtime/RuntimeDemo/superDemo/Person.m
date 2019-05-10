@@ -19,4 +19,8 @@
     }
     return self;
 }
+
+- (void)print {
+    NSLog(@"hahahhahah -- - -%@", self.name);
+}
 @end
