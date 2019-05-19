@@ -10,7 +10,7 @@
 
 
 @interface Person : NSObject
-
+@property (nonatomic, strong) NSString *name;
 - (void)test;
 
 + (void)test;

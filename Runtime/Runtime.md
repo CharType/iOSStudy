@@ -72,3 +72,6 @@
 ![](iOS消息发送流程.jpg)
 
 ### isKindOfClass 和 isMemberOfClass (对象方法和类方法)
+
+
+### 不能使用runtime给已有的类添加成员变量

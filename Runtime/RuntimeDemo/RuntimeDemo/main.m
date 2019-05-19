@@ -12,6 +12,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Person *person = [[Person alloc] init];
+        person.name = @"chengqian";
         [Person test];
         [person test];
         
