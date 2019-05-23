@@ -22,6 +22,13 @@
 		3B647E3D22946352007BBD84 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B647E3C22946352007BBD84 /* TwoViewController.m */; };
 		3B647E40229467C7007BBD84 /* Myproxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B647E3F229467C7007BBD84 /* Myproxy.m */; };
 		3BD969122296FAC300FA2D82 /* MyProxyTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD969112296FAC300FA2D82 /* MyProxyTwo.m */; };
+		3BD9691B2296FD3600FA2D82 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9691A2296FD3600FA2D82 /* AppDelegate.m */; };
+		3BD9691E2296FD3600FA2D82 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9691D2296FD3600FA2D82 /* ViewController.m */; };
+		3BD969212296FD3600FA2D82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD9691F2296FD3600FA2D82 /* Main.storyboard */; };
+		3BD969232296FD3800FA2D82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD969222296FD3800FA2D82 /* Assets.xcassets */; };
+		3BD969262296FD3800FA2D82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD969242296FD3800FA2D82 /* LaunchScreen.storyboard */; };
+		3BD969292296FD3800FA2D82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD969282296FD3800FA2D82 /* main.m */; };
+		3BD9692F2296FD6C00FA2D82 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9692E2296FD6C00FA2D82 /* TwoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +58,18 @@
 		3B647E3F229467C7007BBD84 /* Myproxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Myproxy.m; sourceTree = "<group>"; };
 		3BD969102296FAC300FA2D82 /* MyProxyTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyProxyTwo.h; sourceTree = "<group>"; };
 		3BD969112296FAC300FA2D82 /* MyProxyTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyProxyTwo.m; sourceTree = "<group>"; };
+		3BD969172296FD3600FA2D82 /* GCDTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCDTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD969192296FD3600FA2D82 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3BD9691A2296FD3600FA2D82 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3BD9691C2296FD3600FA2D82 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3BD9691D2296FD3600FA2D82 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3BD969202296FD3600FA2D82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BD969222296FD3800FA2D82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BD969252296FD3800FA2D82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BD969272296FD3800FA2D82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BD969282296FD3800FA2D82 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3BD9692D2296FD6C00FA2D82 /* TwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		3BD9692E2296FD6C00FA2D82 /* TwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +87,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BD969142296FD3600FA2D82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,6 +102,7 @@
 			children = (
 				3B647E0A22945FAD007BBD84 /* 内存管理 */,
 				3B647E26229460C9007BBD84 /* TimerDemo */,
+				3BD969182296FD3600FA2D82 /* GCDTimer */,
 				3B647E0922945FAD007BBD84 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +112,7 @@
 			children = (
 				3B647E0822945FAD007BBD84 /* 内存管理.app */,
 				3B647E25229460C9007BBD84 /* TimerDemo.app */,
+				3BD969172296FD3600FA2D82 /* GCDTimer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +155,24 @@
 			path = TimerDemo;
 			sourceTree = "<group>";
 		};
+		3BD969182296FD3600FA2D82 /* GCDTimer */ = {
+			isa = PBXGroup;
+			children = (
+				3BD969192296FD3600FA2D82 /* AppDelegate.h */,
+				3BD9691A2296FD3600FA2D82 /* AppDelegate.m */,
+				3BD9691C2296FD3600FA2D82 /* ViewController.h */,
+				3BD9691D2296FD3600FA2D82 /* ViewController.m */,
+				3BD9692D2296FD6C00FA2D82 /* TwoViewController.h */,
+				3BD9692E2296FD6C00FA2D82 /* TwoViewController.m */,
+				3BD9691F2296FD3600FA2D82 /* Main.storyboard */,
+				3BD969222296FD3800FA2D82 /* Assets.xcassets */,
+				3BD969242296FD3800FA2D82 /* LaunchScreen.storyboard */,
+				3BD969272296FD3800FA2D82 /* Info.plist */,
+				3BD969282296FD3800FA2D82 /* main.m */,
+			);
+			path = GCDTimer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,6 +210,23 @@
 			productReference = 3B647E25229460C9007BBD84 /* TimerDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3BD969162296FD3600FA2D82 /* GCDTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BD9692A2296FD3800FA2D82 /* Build configuration list for PBXNativeTarget "GCDTimer" */;
+			buildPhases = (
+				3BD969132296FD3600FA2D82 /* Sources */,
+				3BD969142296FD3600FA2D82 /* Frameworks */,
+				3BD969152296FD3600FA2D82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GCDTimer;
+			productName = GCDTimer;
+			productReference = 3BD969172296FD3600FA2D82 /* GCDTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -177,6 +240,9 @@
 						CreatedOnToolsVersion = 10.1;
 					};
 					3B647E24229460C9007BBD84 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					3BD969162296FD3600FA2D82 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -196,6 +262,7 @@
 			targets = (
 				3B647E0722945FAD007BBD84 /* 内存管理 */,
 				3B647E24229460C9007BBD84 /* TimerDemo */,
+				3BD969162296FD3600FA2D82 /* GCDTimer */,
 			);
 		};
 /* End PBXProject section */
@@ -218,6 +285,16 @@
 				3B647E34229460CA007BBD84 /* LaunchScreen.storyboard in Resources */,
 				3B647E31229460CA007BBD84 /* Assets.xcassets in Resources */,
 				3B647E2F229460C9007BBD84 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD969152296FD3600FA2D82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD969262296FD3800FA2D82 /* LaunchScreen.storyboard in Resources */,
+				3BD969232296FD3800FA2D82 /* Assets.xcassets in Resources */,
+				3BD969212296FD3600FA2D82 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +321,17 @@
 				3BD969122296FAC300FA2D82 /* MyProxyTwo.m in Sources */,
 				3B647E29229460C9007BBD84 /* AppDelegate.m in Sources */,
 				3B647E3D22946352007BBD84 /* TwoViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD969132296FD3600FA2D82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD9691E2296FD3600FA2D82 /* ViewController.m in Sources */,
+				3BD969292296FD3800FA2D82 /* main.m in Sources */,
+				3BD9691B2296FD3600FA2D82 /* AppDelegate.m in Sources */,
+				3BD9692F2296FD6C00FA2D82 /* TwoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +366,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				3B647E33229460CA007BBD84 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3BD9691F2296FD3600FA2D82 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BD969202296FD3600FA2D82 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3BD969242296FD3800FA2D82 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BD969252296FD3800FA2D82 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -461,6 +565,38 @@
 			};
 			name = Release;
 		};
+		3BD9692B2296FD3800FA2D82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GCDTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.www.GCDTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BD9692C2296FD3800FA2D82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GCDTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.www.GCDTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -487,6 +623,15 @@
 			buildConfigurations = (
 				3B647E39229460CA007BBD84 /* Debug */,
 				3B647E3A229460CA007BBD84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BD9692A2296FD3800FA2D82 /* Build configuration list for PBXNativeTarget "GCDTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BD9692B2296FD3800FA2D82 /* Debug */,
+				3BD9692C2296FD3800FA2D82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
