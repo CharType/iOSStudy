@@ -29,7 +29,27 @@
 		3BD969262296FD3800FA2D82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD969242296FD3800FA2D82 /* LaunchScreen.storyboard */; };
 		3BD969292296FD3800FA2D82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD969282296FD3800FA2D82 /* main.m */; };
 		3BD9692F2296FD6C00FA2D82 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9692E2296FD6C00FA2D82 /* TwoViewController.m */; };
+		3BD969372297D9BA00FA2D82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD969362297D9BA00FA2D82 /* main.m */; };
+		3BF6DF32229EDF590086EDC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF6DF31229EDF590086EDC5 /* AppDelegate.m */; };
+		3BF6DF35229EDF590086EDC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF6DF34229EDF590086EDC5 /* ViewController.m */; };
+		3BF6DF38229EDF590086EDC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BF6DF36229EDF590086EDC5 /* Main.storyboard */; };
+		3BF6DF3A229EDF5B0086EDC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BF6DF39229EDF5B0086EDC5 /* Assets.xcassets */; };
+		3BF6DF3D229EDF5B0086EDC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BF6DF3B229EDF5B0086EDC5 /* LaunchScreen.storyboard */; };
+		3BF6DF40229EDF5B0086EDC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF6DF3F229EDF5B0086EDC5 /* main.m */; };
+		3BF6DF46229EDFB50086EDC5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF6DF45229EDFB50086EDC5 /* Person.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3BD969322297D9B900FA2D82 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3B647E0822945FAD007BBD84 /* 内存管理.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "内存管理.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +90,20 @@
 		3BD969282296FD3800FA2D82 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BD9692D2296FD6C00FA2D82 /* TwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
 		3BD9692E2296FD6C00FA2D82 /* TwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		3BD969342297D9B900FA2D82 /* 内存布局 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "内存布局"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD969362297D9BA00FA2D82 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3BF6DF2E229EDF580086EDC5 /* AutoreleaseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoreleaseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BF6DF30229EDF590086EDC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3BF6DF31229EDF590086EDC5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3BF6DF33229EDF590086EDC5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3BF6DF34229EDF590086EDC5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3BF6DF37229EDF590086EDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BF6DF39229EDF5B0086EDC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BF6DF3C229EDF5B0086EDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BF6DF3E229EDF5B0086EDC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BF6DF3F229EDF5B0086EDC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3BF6DF44229EDFB50086EDC5 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		3BF6DF45229EDFB50086EDC5 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +128,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BD969312297D9B900FA2D82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BF6DF2B229EDF580086EDC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -103,6 +151,8 @@
 				3B647E0A22945FAD007BBD84 /* 内存管理 */,
 				3B647E26229460C9007BBD84 /* TimerDemo */,
 				3BD969182296FD3600FA2D82 /* GCDTimer */,
+				3BD969352297D9BA00FA2D82 /* 内存布局 */,
+				3BF6DF2F229EDF590086EDC5 /* AutoreleaseDemo */,
 				3B647E0922945FAD007BBD84 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,6 +163,8 @@
 				3B647E0822945FAD007BBD84 /* 内存管理.app */,
 				3B647E25229460C9007BBD84 /* TimerDemo.app */,
 				3BD969172296FD3600FA2D82 /* GCDTimer.app */,
+				3BD969342297D9B900FA2D82 /* 内存布局 */,
+				3BF6DF2E229EDF580086EDC5 /* AutoreleaseDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,6 +225,32 @@
 			path = GCDTimer;
 			sourceTree = "<group>";
 		};
+		3BD969352297D9BA00FA2D82 /* 内存布局 */ = {
+			isa = PBXGroup;
+			children = (
+				3BD969362297D9BA00FA2D82 /* main.m */,
+			);
+			path = "内存布局";
+			sourceTree = "<group>";
+		};
+		3BF6DF2F229EDF590086EDC5 /* AutoreleaseDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3BF6DF30229EDF590086EDC5 /* AppDelegate.h */,
+				3BF6DF31229EDF590086EDC5 /* AppDelegate.m */,
+				3BF6DF33229EDF590086EDC5 /* ViewController.h */,
+				3BF6DF34229EDF590086EDC5 /* ViewController.m */,
+				3BF6DF44229EDFB50086EDC5 /* Person.h */,
+				3BF6DF45229EDFB50086EDC5 /* Person.m */,
+				3BF6DF36229EDF590086EDC5 /* Main.storyboard */,
+				3BF6DF39229EDF5B0086EDC5 /* Assets.xcassets */,
+				3BF6DF3B229EDF5B0086EDC5 /* LaunchScreen.storyboard */,
+				3BF6DF3E229EDF5B0086EDC5 /* Info.plist */,
+				3BF6DF3F229EDF5B0086EDC5 /* main.m */,
+			);
+			path = AutoreleaseDemo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,6 +305,40 @@
 			productReference = 3BD969172296FD3600FA2D82 /* GCDTimer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3BD969332297D9B900FA2D82 /* 内存布局 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BD9693A2297D9BA00FA2D82 /* Build configuration list for PBXNativeTarget "内存布局" */;
+			buildPhases = (
+				3BD969302297D9B900FA2D82 /* Sources */,
+				3BD969312297D9B900FA2D82 /* Frameworks */,
+				3BD969322297D9B900FA2D82 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "内存布局";
+			productName = "内存布局";
+			productReference = 3BD969342297D9B900FA2D82 /* 内存布局 */;
+			productType = "com.apple.product-type.tool";
+		};
+		3BF6DF2D229EDF580086EDC5 /* AutoreleaseDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BF6DF43229EDF5B0086EDC5 /* Build configuration list for PBXNativeTarget "AutoreleaseDemo" */;
+			buildPhases = (
+				3BF6DF2A229EDF580086EDC5 /* Sources */,
+				3BF6DF2B229EDF580086EDC5 /* Frameworks */,
+				3BF6DF2C229EDF580086EDC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoreleaseDemo;
+			productName = AutoreleaseDemo;
+			productReference = 3BF6DF2E229EDF580086EDC5 /* AutoreleaseDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -243,6 +355,12 @@
 						CreatedOnToolsVersion = 10.1;
 					};
 					3BD969162296FD3600FA2D82 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					3BD969332297D9B900FA2D82 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					3BF6DF2D229EDF580086EDC5 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -263,6 +381,8 @@
 				3B647E0722945FAD007BBD84 /* 内存管理 */,
 				3B647E24229460C9007BBD84 /* TimerDemo */,
 				3BD969162296FD3600FA2D82 /* GCDTimer */,
+				3BD969332297D9B900FA2D82 /* 内存布局 */,
+				3BF6DF2D229EDF580086EDC5 /* AutoreleaseDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -295,6 +415,16 @@
 				3BD969262296FD3800FA2D82 /* LaunchScreen.storyboard in Resources */,
 				3BD969232296FD3800FA2D82 /* Assets.xcassets in Resources */,
 				3BD969212296FD3600FA2D82 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BF6DF2C229EDF580086EDC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BF6DF3D229EDF5B0086EDC5 /* LaunchScreen.storyboard in Resources */,
+				3BF6DF3A229EDF5B0086EDC5 /* Assets.xcassets in Resources */,
+				3BF6DF38229EDF590086EDC5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +462,25 @@
 				3BD969292296FD3800FA2D82 /* main.m in Sources */,
 				3BD9691B2296FD3600FA2D82 /* AppDelegate.m in Sources */,
 				3BD9692F2296FD6C00FA2D82 /* TwoViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD969302297D9B900FA2D82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD969372297D9BA00FA2D82 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BF6DF2A229EDF580086EDC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BF6DF35229EDF590086EDC5 /* ViewController.m in Sources */,
+				3BF6DF40229EDF5B0086EDC5 /* main.m in Sources */,
+				3BF6DF46229EDFB50086EDC5 /* Person.m in Sources */,
+				3BF6DF32229EDF590086EDC5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +531,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				3BD969252296FD3800FA2D82 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3BF6DF36229EDF590086EDC5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BF6DF37229EDF590086EDC5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3BF6DF3B229EDF5B0086EDC5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BF6DF3C229EDF5B0086EDC5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -597,6 +762,62 @@
 			};
 			name = Release;
 		};
+		3BD969382297D9BA00FA2D82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3BD969392297D9BA00FA2D82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3BF6DF41229EDF5B0086EDC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AutoreleaseDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.www.AutoreleaseDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BF6DF42229EDF5B0086EDC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AutoreleaseDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.www.AutoreleaseDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -632,6 +853,24 @@
 			buildConfigurations = (
 				3BD9692B2296FD3800FA2D82 /* Debug */,
 				3BD9692C2296FD3800FA2D82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BD9693A2297D9BA00FA2D82 /* Build configuration list for PBXNativeTarget "内存布局" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BD969382297D9BA00FA2D82 /* Debug */,
+				3BD969392297D9BA00FA2D82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BF6DF43229EDF5B0086EDC5 /* Build configuration list for PBXNativeTarget "AutoreleaseDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BF6DF41229EDF5B0086EDC5 /* Debug */,
+				3BF6DF42229EDF5B0086EDC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
