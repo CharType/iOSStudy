@@ -42,6 +42,10 @@
     }
 }
 
+- (void)lockTest {
+    
+}
+
 - (void)ticketTest {
     OSSpinLockLock(&_lock);
     [NSThread sleepForTimeInterval:600];

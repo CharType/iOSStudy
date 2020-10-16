@@ -98,7 +98,7 @@
 
 ### 其他
 * 使用clang 将OC代码转换为C++代码
-* xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc -fobjc-arc -fobjc-runtime=ios-8.0.0 main.m -o main_cpp.cpp
+* 
 
 * block源码地址
 [点击这里下载](https://opensource.apple.com/tarballs/libclosure/)

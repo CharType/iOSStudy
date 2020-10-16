@@ -15,6 +15,7 @@
 		3B931139222EE6900091380D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B931138222EE6900091380D /* main.m */; };
 		3B95262B223EB80A00B4927D /* MyPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B952629223EB80900B4927D /* MyPerson.m */; };
 		3B95262E223FB9A400B4927D /* MyPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B95262C223FB9A400B4927D /* MyPerson.m */; };
+		3BBD031E24E23F10003D9BCE /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD031D24E23F10003D9BCE /* Student.m */; };
 		3BE2A84622301CCE0000242B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2A84522301CCE0000242B /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +81,6 @@
 		3B3C3D27222D83E2001F915B /* main_block4.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_block4.cpp; sourceTree = "<group>"; };
 		3B3C3D29222D85AB001F915B /* Persion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Persion.h; sourceTree = "<group>"; };
 		3B3C3D2A222D85AB001F915B /* Persion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Persion.m; sourceTree = "<group>"; };
-		3B3C3D2C222D869B001F915B /* Persion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Persion.cpp; sourceTree = "<group>"; };
 		3B6E22B52234BC5100C6DF54 /* MyPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPerson.h; sourceTree = "<group>"; };
 		3B6E22B62234BC5100C6DF54 /* MyPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyPerson.m; sourceTree = "<group>"; };
 		3B6E22BC22378F0D00C6DF54 /* Block__blockDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Block__blockDemo; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +94,8 @@
 		3B95262A223EB80A00B4927D /* MyPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyPerson.h; path = blockCopyDemo/MyPerson.h; sourceTree = SOURCE_ROOT; };
 		3B95262C223FB9A400B4927D /* MyPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyPerson.m; path = blockCopyDemo/MyPerson.m; sourceTree = SOURCE_ROOT; };
 		3B95262D223FB9A400B4927D /* MyPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyPerson.h; path = blockCopyDemo/MyPerson.h; sourceTree = SOURCE_ROOT; };
+		3BBD031C24E23F10003D9BCE /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		3BBD031D24E23F10003D9BCE /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		3BE2A84322301CCE0000242B /* blockCopyDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = blockCopyDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE2A84522301CCE0000242B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,7 +192,8 @@
 			children = (
 				3B3C3D29222D85AB001F915B /* Persion.h */,
 				3B3C3D2A222D85AB001F915B /* Persion.m */,
-				3B3C3D2C222D869B001F915B /* Persion.cpp */,
+				3BBD031C24E23F10003D9BCE /* Student.h */,
+				3BBD031D24E23F10003D9BCE /* Student.m */,
 			);
 			path = Persion;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			files = (
 				3B3C3D2B222D85AB001F915B /* Persion.m in Sources */,
 				3B3C3D1D22284547001F915B /* main.m in Sources */,
+				3BBD031E24E23F10003D9BCE /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Persion : NSObject
-
+- (void)test3;
 @end
 
 NS_ASSUME_NONNULL_END

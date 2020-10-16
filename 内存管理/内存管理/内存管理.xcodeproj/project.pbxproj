@@ -21,6 +21,8 @@
 		3B647E37229460CA007BBD84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B647E36229460CA007BBD84 /* main.m */; };
 		3B647E3D22946352007BBD84 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B647E3C22946352007BBD84 /* TwoViewController.m */; };
 		3B647E40229467C7007BBD84 /* Myproxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B647E3F229467C7007BBD84 /* Myproxy.m */; };
+		3B7C648B22A37B320060F3B6 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C648A22A37B320060F3B6 /* TwoViewController.m */; };
+		3B7C648E22A37B450060F3B6 /* ThereViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C648D22A37B450060F3B6 /* ThereViewController.m */; };
 		3BD969122296FAC300FA2D82 /* MyProxyTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD969112296FAC300FA2D82 /* MyProxyTwo.m */; };
 		3BD9691B2296FD3600FA2D82 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9691A2296FD3600FA2D82 /* AppDelegate.m */; };
 		3BD9691E2296FD3600FA2D82 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9691D2296FD3600FA2D82 /* ViewController.m */; };
@@ -76,6 +78,10 @@
 		3B647E3C22946352007BBD84 /* TwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
 		3B647E3E229467C7007BBD84 /* Myproxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Myproxy.h; sourceTree = "<group>"; };
 		3B647E3F229467C7007BBD84 /* Myproxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Myproxy.m; sourceTree = "<group>"; };
+		3B7C648922A37B320060F3B6 /* TwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		3B7C648A22A37B320060F3B6 /* TwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		3B7C648C22A37B450060F3B6 /* ThereViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThereViewController.h; sourceTree = "<group>"; };
+		3B7C648D22A37B450060F3B6 /* ThereViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThereViewController.m; sourceTree = "<group>"; };
 		3BD969102296FAC300FA2D82 /* MyProxyTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyProxyTwo.h; sourceTree = "<group>"; };
 		3BD969112296FAC300FA2D82 /* MyProxyTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyProxyTwo.m; sourceTree = "<group>"; };
 		3BD969172296FD3600FA2D82 /* GCDTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCDTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +253,10 @@
 				3BF6DF3B229EDF5B0086EDC5 /* LaunchScreen.storyboard */,
 				3BF6DF3E229EDF5B0086EDC5 /* Info.plist */,
 				3BF6DF3F229EDF5B0086EDC5 /* main.m */,
+				3B7C648922A37B320060F3B6 /* TwoViewController.h */,
+				3B7C648A22A37B320060F3B6 /* TwoViewController.m */,
+				3B7C648C22A37B450060F3B6 /* ThereViewController.h */,
+				3B7C648D22A37B450060F3B6 /* ThereViewController.m */,
 			);
 			path = AutoreleaseDemo;
 			sourceTree = "<group>";
@@ -478,8 +488,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BF6DF35229EDF590086EDC5 /* ViewController.m in Sources */,
+				3B7C648E22A37B450060F3B6 /* ThereViewController.m in Sources */,
 				3BF6DF40229EDF5B0086EDC5 /* main.m in Sources */,
 				3BF6DF46229EDFB50086EDC5 /* Person.m in Sources */,
+				3B7C648B22A37B320060F3B6 /* TwoViewController.m in Sources */,
 				3BF6DF32229EDF590086EDC5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Student.h"
 
 void (^Myblock)(void);
 int a = 10;
@@ -71,26 +71,34 @@ static int b = 20;
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        
+//        int a = 10;
+//        int *a = 10;
+        
 //        test1();
 //        test2();
 //        test3();
 //        block();
-        int c = 10;
-        NSObject *strongObject = [[NSObject alloc] init];
-        void (^testBlock)(void) =  ^{
-            NSLog(@"c = %d", c);
-            NSLog(@"strongObject = %@", strongObject);
-        };
-        
-        
-        __weak NSObject *weakObject = strongObject;
-        
-        void (^block)(void) = ^{
-            NSLog(@"c = %d d strongObject =  %@ weakObject = %@", c, strongObject, weakObject);
-            NSLog(@"testBlock = %@",testBlock);
-        };
-        
-        [block copy];
+//        int c = 10;
+//        NSObject *strongObject = [[NSObject alloc] init];
+//        void (^testBlock)(void) =  ^{
+//            NSLog(@"c = %d", c);
+//            NSLog(@"strongObject = %@", strongObject);
+//        };
+//
+//
+//        __weak NSObject *weakObject = strongObject;
+//
+//        void (^block)(void) = ^{
+//            NSLog(@"c = %d d strongObject =  %@ weakObject = %@", c, strongObject, weakObject);
+//            NSLog(@"testBlock = %@",testBlock);
+//        };
+//
+//        [block copy];
+        {
+            Student *s = [[Student alloc] init];
+        }
+        NSLog(@"hahahahah");
     }
     return 0;
 }

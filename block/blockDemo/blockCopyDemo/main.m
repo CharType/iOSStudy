@@ -48,10 +48,10 @@ void blockTypeTest() {
         // 在ARC下 这个block会自动进行copy ,所以会对person对象强引用
 //        __weak typeof(person) weakPerson = person;
         block = ^{
-            NSLog(@"person.age = %ld", person.age);
+            NSLog(@"person.age");
         };
-        
-        [person release];
+        NSLog(@"");
+//        [person release];
     }
     
     block();

@@ -13,4 +13,12 @@
 //    [super dealloc];
     NSLog(@"%s", __func__);
 }
+- (void)test {
+    [super class];
+}
+
+- (void)print {
+    NSLog(@"MyPerson -- print");
+}
+
 @end

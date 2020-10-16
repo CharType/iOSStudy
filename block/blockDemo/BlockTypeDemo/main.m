@@ -49,13 +49,13 @@ struct __main_block_impl_0 {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // block类型demo
-        blockTypeTest();
+//        blockTypeTest();
         
         // ARC下会自动进行copy的Demo
         test3();
         
         // block多次调用了copydemo
-        blockCopyTest();
+//        blockCopyTest();
         
     }
     return 0;
@@ -141,9 +141,15 @@ void blockTypeTest(){
 
 MyBlock tets4 () {
     int a = 20;
+   __block int b = 20;
+    b = b+10;
+    
     MyBlock block = ^{
-        NSLog(@"%d", a);
+        NSLog(@"%d", b);
     };
+    NSLog(@"%d",b);
+    
+    NSLog(@"dasad");
     return block;
 }
 
@@ -159,6 +165,7 @@ void test3() {
     //    [block release];
     
     MyBlock block1 = tets4();
+    block1();
     NSLog(@"%@", [block1 class]);
     // MRC: __NSStackBlock__
     // ARC: __NSMallocBlock__

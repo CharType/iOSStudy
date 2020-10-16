@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MyPerson : NSObject
 @property (nonatomic, assign) NSInteger age;
 @property (nonatomic, copy) void (^block)(void);
+- (void)print;
 @end
 
 NS_ASSUME_NONNULL_END
